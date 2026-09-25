@@ -1,0 +1,13 @@
+{
+  "val_macro_f05": 0.9721,
+  "threshold": 0.7,
+  "val_candidate_recall": 0.9702,
+  "val_stage1_recall": 0.975,
+  "val_oracle_f05": 0.9906,
+  "cands_per_s1": 30.0,
+  "test_matches": 5627333,
+  "test_s1_with_match": 1614580,
+  "validator": "PASS (--check-ids)",
+  "archived_at": "2026-09-26T04:47:03",
+  "note": "notebook code/src/improved.ipynb; run_attempt1.log = aborted run with the exact-key range-slicing leak (recall 4.17)"
+}
