@@ -1,0 +1,9 @@
+{
+  "s1_entities": 2206821,
+  "true_pairs": 7638365,
+  "singleton_rate": 0.0558,
+  "same_country_rate": 1.0,
+  "multi_owner_ids": 0,
+  "archived_at": "2026-09-26T04:47:21",
+  "note": "ground-truth EDA (view_same.py --analyze)"
+}

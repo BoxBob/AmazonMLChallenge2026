@@ -1,0 +1,56 @@
+building analysis tables (one-time; streams all 4 train files)...
+  country table: s1 2,206,821 rows in 73s
+  country table: s2 5,034,616 rows in 232s
+  country table: s3 5,285,603 rows in 393s
+  ground truth: 2,206,821 S1 rows, 7,638,365 match pairs in 145s
+======================================================================
+S1 entities: 2,206,821
+Singletons (no true match): 123,247 (5.5848%)
+
+Match-count distribution:
+    0 matches: 123,247
+    1 matches: 119,157
+    2 matches: 375,212
+    3 matches: 530,841
+    4 matches: 484,115
+    5 matches: 321,957
+    6 matches: 164,868
+    7 matches: 63,968
+    8 matches: 18,680
+    9 matches: 4,205
+   10 matches: 534
+   11 matches: 37
+
+S2-match-count distribution:
+    0 S2 matches: 287,745
+    1 S2 matches: 789,108
+    2 S2 matches: 652,779
+    3 S2 matches: 333,957
+    4 S2 matches: 119,078
+    5 S2 matches: 24,154
+S3-match-count distribution:
+    0 S3 matches: 266,276
+    1 S3 matches: 716,417
+    2 S3 matches: 668,375
+    3 S3 matches: 372,443
+    4 S3 matches: 145,116
+    5 S3 matches: 35,378
+    6 S3 matches: 2,816
+
+Distinct matched S2/S3 ids: 7,638,365
+  ...claimed by more than one S1 entity: 0
+
+True (S1, match) pairs checked for country agreement: 7,638,365
+  same country: 7,638,365 (100.0000%)
+
+S2 total: 5,034,616  matched: 3,693,619 (73.3645%)
+S3 total: 5,285,603  matched: 3,944,746 (74.6319%)
+
+Per-source, per-country breakdown:
+  s1       'US': n=1,323,633  blank_name=      0 (0.00%)  blank_addr=       0 (0.00%)  has_5_6digit_num=  146,590 (11.07%)
+  s1    'India': n=  883,188  blank_name=      0 (0.00%)  blank_addr=       0 (0.00%)  has_5_6digit_num=    3,358 (0.38%)
+  s2       'US': n=3,016,817  blank_name=      0 (0.00%)  blank_addr= 111,121 (3.68%)  has_5_6digit_num=  364,951 (12.10%)
+  s2    'India': n=2,017,799  blank_name=      0 (0.00%)  blank_addr=  57,846 (2.87%)  has_5_6digit_num=   24,670 (1.22%)
+  s3       'US': n=3,170,056  blank_name=      0 (0.00%)  blank_addr= 110,968 (3.50%)  has_5_6digit_num=  382,179 (12.06%)
+  s3    'India': n=2,115,547  blank_name=      0 (0.00%)  blank_addr=  64,948 (3.07%)  has_5_6digit_num=   23,852 (1.13%)
+======================================================================

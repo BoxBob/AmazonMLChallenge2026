@@ -4,3 +4,12 @@ __pycache__/
 dataset
 PS
 work
+.venv/
+
+# large generated artifacts: kept on disk under versions/<trial>/, tracked in git only via MANIFEST.md (sha256)
+output/
+versions/**/*.tsv
+versions/**/*.npz
+versions/**/*.npy
+*.zip
+*.pdf

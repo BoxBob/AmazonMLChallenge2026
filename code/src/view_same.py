@@ -218,6 +218,10 @@ def analyze_ground_truth(force_rebuild=False):
 
 
 if __name__ == "__main__":
+    # Windows consoles/redirects default to cp1252, which can't encode the
+    # Devanagari business names in the India records.
+    sys.stdout.reconfigure(encoding="utf-8")
+
     if len(sys.argv) < 2:
         print("usage: python view_same.py <source1_entity_id> [<source1_entity_id> ...]")
         print("       python view_same.py --analyze [--force-rebuild]")
