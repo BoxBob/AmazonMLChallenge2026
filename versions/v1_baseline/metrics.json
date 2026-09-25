@@ -1,0 +1,12 @@
+{
+  "val_macro_f05": 0.8871,
+  "threshold": 0.625,
+  "val_candidate_recall": 0.8364,
+  "val_oracle_f05": 0.9275,
+  "cands_per_s1": 39.7,
+  "test_matches": 4767828,
+  "test_s1_with_match": 1565860,
+  "validator": "PASS",
+  "archived_at": "2026-09-26T04:47:01",
+  "note": "notebook code/src/baseline.ipynb"
+}

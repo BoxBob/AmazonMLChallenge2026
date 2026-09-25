@@ -1,0 +1,421 @@
+Input Notebook:  code/src/baseline.ipynb
+Output Notebook: work/baseline/baseline_executed.ipynb
+Working directory: code/src
+D:\AmazonMLChallenge2026\.venv\Lib\site-packages\nbformat\validator.py:434: MissingIDFieldWarning: Cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.
+  _validate(nbdict, ref, version, version_minor, relax_add_props)
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+Executing notebook with kernel: python3
+Executing Cell 1---------------------------------------
+Ending Cell 1------------------------------------------
+Executing Cell 2---------------------------------------
+torch 2.11.0+cu128 | GPU: NVIDIA GeForce RTX 3050 6GB Laptop GPU | xgboost 3.4.1 | pandas 3.0.6
+
+Ending Cell 2------------------------------------------
+Executing Cell 3---------------------------------------
+Ending Cell 3------------------------------------------
+Executing Cell 4---------------------------------------
+Ending Cell 4------------------------------------------
+Executing Cell 5---------------------------------------
+Ending Cell 5------------------------------------------
+Executing Cell 6---------------------------------------
+('maure williams colombier inc', 'maure williams colombier', 'inc') ('maurewilliamscolombier', 'maurewilliamscolombier', '')
+('raj investments elelpi', 'raj investments elelpi', '') ('sci ptit amicale', 'ptit amicale', 'sci')
+('85 wanye ave ticonderoga townshiip ny', '', '85') ('6 29 cit colony chennai tn 600004', '600004', '6')
+
+Ending Cell 6------------------------------------------
+Executing Cell 7---------------------------------------
+[     16s] train source1: 2,206,821 records normalized
+
+[     51s] train source2: 5,034,616 records normalized
+
+[     86s] train source3: 5,285,603 records normalized
+
+[    102s] train records: 12,527,040  countries=['US', 'India']
+
+[    114s] test source1: 1,732,544 records normalized
+
+[    149s] test source2: 4,887,273 records normalized
+
+[    184s] test source3: 5,082,316 records normalized
+
+[    198s] test records: 11,702,133  countries=['US', 'France', 'India']
+
+Ending Cell 7------------------------------------------
+Executing Cell 8---------------------------------------
+Ending Cell 8------------------------------------------
+Executing Cell 9---------------------------------------
+D:\AmazonMLChallenge2026\work\tmp\ipykernel_8652\1538579567.py:2: UserWarning: Sparse invariant checks are implicitly disabled. Memory errors (e.g. SEGFAULT) will occur when operating on a sparse tensor which violates the invariants, but checks incur performance overhead. To silence this warning, explicitly opt in or out. See `torch.sparse.check_sparse_tensor_invariants.__doc__` for guidance.  (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\Context.cpp:767.)
+  return torch.sparse_csr_tensor(torch.from_numpy(X.indptr.astype(np.int64)),
+D:\AmazonMLChallenge2026\work\tmp\ipykernel_8652\1538579567.py:2: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\SparseCsrTensorImpl.cpp:51.)
+  return torch.sparse_csr_tensor(torch.from_numpy(X.indptr.astype(np.int64)),
+
+[    212s] core: TF-IDF vocab 58,773, SVD top singular values [76.48426818847656, 47.35219955444336, 45.1104621887207]
+
+[    353s] train core embeddings written
+
+[    485s] test core embeddings written
+
+[    502s] addr: TF-IDF vocab 73,071, SVD top singular values [60.31268310546875, 49.46630859375, 40.81626892089844]
+
+[    633s] train addr embeddings written
+
+[    761s] test addr embeddings written
+
+Ending Cell 9------------------------------------------
+Executing Cell 10--------------------------------------
+Ending Cell 10-----------------------------------------
+Executing Cell 11--------------------------------------
+Ending Cell 11-----------------------------------------
+Executing Cell 12--------------------------------------
+Ending Cell 12-----------------------------------------
+Executing Cell 13--------------------------------------
+[    786s] ground truth: 2,206,821 S1, 7,638,365 true pairs
+
+Ending Cell 13-----------------------------------------
+Executing Cell 14--------------------------------------
+Ending Cell 14-----------------------------------------
+Executing Cell 15--------------------------------------
+Ending Cell 15-----------------------------------------
+Executing Cell 16--------------------------------------
+Ending Cell 16-----------------------------------------
+Executing Cell 17--------------------------------------
+[    890s]   train country=US S2: kNN done for 179,766 queries
+
+[    991s]   train country=US S3: kNN done for 179,766 queries
+
+[   1042s]   train country=India S2: kNN done for 120,234 queries
+
+[   1088s]   train country=India S3: kNN done for 120,234 queries
+
+[   1124s] train: 11,911,576 candidate pairs for 300,000 S1 queries (39.7 per query)
+
+[   1151s]   features 2,379,941/11,911,576
+
+[   1175s]   features 4,762,152/11,911,576
+
+[   1198s]   features 7,145,625/11,911,576
+
+[   1223s]   features 9,528,229/11,911,576
+
+[   1243s]   features 11,911,576/11,911,576
+
+[   1296s]   train country=US S2: kNN done for 60,168 queries
+
+[   1329s]   train country=US S3: kNN done for 60,168 queries
+
+[   1346s]   train country=India S2: kNN done for 39,832 queries
+
+[   1362s]   train country=India S3: kNN done for 39,832 queries
+
+[   1392s] train: 3,970,351 candidate pairs for 100,000 S1 queries (39.7 per query)
+
+[   1412s]   features 2,381,355/3,970,351
+
+[   1424s]   features 3,970,351/3,970,351
+
+[   1430s] train: blocking pair recall 0.8362 (866,389/1,036,105), 39.7 cands/S1, oracle macro-F0.5 0.9279
+
+[   1430s] val: blocking pair recall 0.8364 (289,769/346,462), 39.7 cands/S1, oracle macro-F0.5 0.9275
+
+Ending Cell 17-----------------------------------------
+Executing Cell 18--------------------------------------
+Ending Cell 18-----------------------------------------
+Executing Cell 19--------------------------------------
+[0]	val-logloss:0.19545	val-aucpr:0.96745
+
+[100]	val-logloss:0.01780	val-aucpr:0.99163
+
+[200]	val-logloss:0.01594	val-aucpr:0.99311
+
+[300]	val-logloss:0.01527	val-aucpr:0.99363
+
+[400]	val-logloss:0.01484	val-aucpr:0.99395
+
+[500]	val-logloss:0.01461	val-aucpr:0.99412
+
+[600]	val-logloss:0.01444	val-aucpr:0.99425
+
+[700]	val-logloss:0.01431	val-aucpr:0.99435
+
+[800]	val-logloss:0.01422	val-aucpr:0.99441
+
+[900]	val-logloss:0.01417	val-aucpr:0.99445
+
+[1000]	val-logloss:0.01411	val-aucpr:0.99449
+
+[1100]	val-logloss:0.01407	val-aucpr:0.99451
+
+[1200]	val-logloss:0.01404	val-aucpr:0.99454
+
+[1300]	val-logloss:0.01401	val-aucpr:0.99456
+
+[1400]	val-logloss:0.01399	val-aucpr:0.99457
+
+[1500]	val-logloss:0.01397	val-aucpr:0.99458
+
+[1600]	val-logloss:0.01396	val-aucpr:0.99459
+
+[1676]	val-logloss:0.01396	val-aucpr:0.99459
+
+[   1623s] best iteration 1626
+
+addr_blank_c       5567.2
+a_tset             1535.9
+exact_pc_first     1159.2
+hn_eq               860.4
+exact_squash        639.1
+rel_a_tset          497.2
+n_partial           334.8
+pc_eq               180.8
+n_jw_squash          80.1
+squash_contains      72.5
+suffix_eq            64.5
+rank_core            56.2
+n_full_tset          51.0
+a_tsort              49.3
+first_eq             47.6
+cos_core             34.5
+n_ratio              30.3
+len_core_c           26.5
+rank_addr            23.2
+n_tsort              22.6
+rel_n_tset           20.0
+n_cands              18.7
+n_tset               17.1
+cos_addr             15.8
+a_ratio              14.7
+rel_cos_addr         11.7
+rel_cos_core          9.4
+len_core_q            8.8
+src_c                 5.5
+
+60
+Ending Cell 19-----------------------------------------
+Executing Cell 20--------------------------------------
+Ending Cell 20-----------------------------------------
+Executing Cell 21--------------------------------------
+0.200    0.8645
+0.225    0.8673
+0.250    0.8698
+0.275    0.8720
+0.300    0.8740
+0.325    0.8759
+0.350    0.8775
+0.375    0.8791
+0.400    0.8805
+0.425    0.8818
+0.450    0.8828
+0.475    0.8837
+0.500    0.8845
+0.525    0.8851
+0.550    0.8858
+0.575    0.8864
+0.600    0.8868
+0.625    0.8871
+0.650    0.8870
+0.675    0.8869
+0.700    0.8864
+0.725    0.8856
+0.750    0.8845
+0.775    0.8830
+0.800    0.8812
+0.825    0.8792
+0.850    0.8760
+0.875    0.8724
+0.900    0.8683
+0.925    0.8623
+0.950    0.8519
+[   1637s] VALIDATION macro F0.5 = 0.8871 at threshold 0.625
+
+Ending Cell 21-----------------------------------------
+Executing Cell 22--------------------------------------
+Ending Cell 22-----------------------------------------
+Executing Cell 23--------------------------------------
+[   1863s]   test country=US S2: kNN done for 663,106 queries
+
+[   2095s]   test country=US S3: kNN done for 663,106 queries
+
+[   2130s]   test country=France S2: kNN done for 259,452 queries
+
+[   2166s]   test country=France S3: kNN done for 259,452 queries
+
+[   2501s]   test country=India S2: kNN done for 809,986 queries
+
+[   2845s]   test country=India S3: kNN done for 809,986 queries
+
+[   2927s] test: 68,794,909 candidate pairs for 1,732,544 S1 queries (39.7 per query)
+
+[   3004s]   test scored 2,381,369/68,794,909
+
+[   3042s]   test scored 4,762,350/68,794,909
+
+[   3067s]   test scored 7,145,301/68,794,909
+
+[   3089s]   test scored 9,529,248/68,794,909
+
+[   3108s]   test scored 11,910,210/68,794,909
+
+[   3127s]   test scored 14,292,914/68,794,909
+
+[   3146s]   test scored 16,672,744/68,794,909
+
+[   3164s]   test scored 19,055,281/68,794,909
+
+[   3183s]   test scored 21,437,057/68,794,909
+
+[   3202s]   test scored 23,819,338/68,794,909
+
+[   3220s]   test scored 26,201,576/68,794,909
+
+[   3239s]   test scored 28,584,375/68,794,909
+
+[   3261s]   test scored 30,966,799/68,794,909
+
+[   3280s]   test scored 33,351,023/68,794,909
+
+[   3299s]   test scored 35,733,703/68,794,909
+
+[   3319s]   test scored 38,117,028/68,794,909
+
+[   3339s]   test scored 40,499,305/68,794,909
+
+[   3358s]   test scored 42,881,843/68,794,909
+
+[   3377s]   test scored 45,265,098/68,794,909
+
+[   3396s]   test scored 47,646,859/68,794,909
+
+[   3414s]   test scored 50,029,530/68,794,909
+
+[   3433s]   test scored 52,412,824/68,794,909
+
+[   3452s]   test scored 54,791,612/68,794,909
+
+[   3471s]   test scored 57,173,756/68,794,909
+
+[   3490s]   test scored 59,557,459/68,794,909
+
+[   3508s]   test scored 61,940,593/68,794,909
+
+[   3527s]   test scored 64,323,717/68,794,909
+
+[   3547s]   test scored 66,708,310/68,794,909
+
+[   3564s]   test scored 68,794,909/68,794,909
+
+[   3569s] test: 4,767,828 predicted matches, 1,565,860 of 1,732,544 S1 with >=1 match
+
+Ending Cell 23-----------------------------------------
+Executing Cell 24--------------------------------------
+[   3735s] wrote D:\AmazonMLChallenge2026\output\candidate_pairs.tsv (1,732,544 rows)
+
+[   3786s] wrote D:\AmazonMLChallenge2026\output\matching_results.tsv (1,732,544 rows)
+
+ML Challenge 2026 — submission validator
+  test dir: D:\AmazonMLChallenge2026\dataset\test
+  required S1 entities: 1732544
+  matching_results.tsv: 1732544 rows (166684 empty, 1565860 non-empty).
+  candidate_pairs.tsv: 1732544 rows (0 empty, 1732544 non-empty).
+
+WARNING: ID-existence check is OFF (the default) — not checking that matched/candidate IDs exist in the test set. Every other rule is still checked. Re-run with --check-ids to enable it (needs test_source2/3.tsv; uses more memory). A nonexistent ID only lowers your score, never rejects your submission.
+PASS — no blocking issues found. Safe to submit.
+ 
+[   3826s] done
+
+Ending Cell 24-----------------------------------------
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_8652_b39b29f2296f4c559035c085bb31e43e_e5c498e7f5a64236a7b2104afeb50879'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_8652_17b2a15b41664cd5a9af2545fb9d8ddd_818db14b7f53478dbf9c90f2c5bf319f'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_8652_aa8eae97b7434f9e966be9f9811d9b1f_3dbbee36a68e404bbd4cf42aff6a1fc1'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_8652_17b2a15b41664cd5a9af2545fb9d8ddd_b634840548024cd3aa3daa8f4df529c7'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_8652_67c2dd8616f44d00aab2b81952633295_f6cc325108ac42ac99aa0c547090af9b'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_8652_17b2a15b41664cd5a9af2545fb9d8ddd_d9bbdd69ea0d4aee86c8d116ffa89a30'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_8652_5de0cddea72542a983ee81e6d3094f4d_a62c14a7f66949e3a49f88ed5bc3e05e'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_8652_17b2a15b41664cd5a9af2545fb9d8ddd_b7c3ea4c2603421aa1b80cc3ced7696e'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_8652_89ec6436f3784305aa74a367a4282ef7_f38551e4fc1d498e96647b25321de9cb'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_8652_17b2a15b41664cd5a9af2545fb9d8ddd_96bb26913dc34a8c9f9672e42b586e43'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_8652_9ec7bb44feb54d4caa6fc422b4629976_90f3a183b6d640c19cfff64ced55edb4'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_8652_17b2a15b41664cd5a9af2545fb9d8ddd_4d05eb385fc94cb29b091251c181011c'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_8652_f0f030258c544bc0a38ec4236ee9a67d_f89eccb8a9fe465fafa9df9db2911392'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_8652_17b2a15b41664cd5a9af2545fb9d8ddd_a976a718087b4628979993d593f5cf45'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_8652_f914d319f9eb4c58a08afc9f165dc79c_ae2c0e0b444a4c18b2d48cbb9e3a88dc'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_8652_17b2a15b41664cd5a9af2545fb9d8ddd_131f5be80f2c4e5e9b69ca0b569a4c00'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_8652_934930ff1d4f42e0880257fb80026138_6951bf8736244c8690b492c222f45516'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_8652_17b2a15b41664cd5a9af2545fb9d8ddd_13b94993f93446f5a4c69bfa859f5892'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_8652_17b2a15b41664cd5a9af2545fb9d8ddd_09c7621978984142b2d12baeb4b07682'[0m
+exit=0
