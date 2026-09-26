@@ -821,7 +821,7 @@ EX_TV = exact_pairs(train, Q_TV)
 
 # v5: reuse the v4 prefilter model and its cut M (read from the v4 run log)
 pf_model = xgb.Booster(model_file=str(PREV / "prefilter.json"))
-PF_M = int(re.search(r"prefilter keeps top (\d+)", (PREV / "run.log").read_text(encoding="utf-8")).group(1))
+PF_M = int(re.search(r"prefilter keeps top (\d+)", (PREV / "run.log").read_text(encoding="utf-8", errors="replace")).group(1))
 log(f"prefilter keeps top {PF_M} candidates per S1")
 gc.collect()
 
@@ -1476,9 +1476,10 @@ log(f"wrote {OUT_MATCH}: {len(mq):,} matches; candidates copied from v4 ({OUT_CA
 _sk = _key(test, "ex_name_hn").to_numpy(zero_copy_only=False)
 _s1k = pd.Series(_sk[test_q])
 _uniq = _s1k[_s1k != ""].value_counts()
-_sil = pd.DataFrame({"k": _sk[test_q], "q": test_q}).merge(
-    pd.DataFrame({"k": _sk[test.src != 1], "c": np.flatnonzero(test.src != 1)}), on="k")
-_sil = _sil[(_sil.k != "") & (_sil.k.map(_uniq) == 1)]
+_q_df = pd.DataFrame({"k": _sk[test_q], "q": test_q})
+_c_df = pd.DataFrame({"k": _sk[test.src != 1], "c": np.flatnonzero(test.src != 1)})
+_q_df = _q_df[(_q_df.k != "") & (_q_df.k.map(_uniq) == 1)]            # drop empty keys BEFORE the join (P17)
+_sil = _q_df.merge(_c_df[_c_df.k != ""], on="k")
 _pred = set((mq.astype(np.int64) * test.n + mc).tolist())
 _sil["acc"] = [k in _pred for k in (_sil.q.to_numpy(np.int64) * test.n + _sil.c.to_numpy()).tolist()]
 _sil["country"] = te_ctry[test.country_codes[_sil.q.to_numpy()]]

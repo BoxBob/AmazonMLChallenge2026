@@ -1,0 +1,32 @@
+{
+  "val_macro_f05": 0.9826,
+  "holdout_B_macro_f05": 0.9826,
+  "thresholds": {
+    "India": 0.7,
+    "US": 0.675,
+    "default(France)": 0.7
+  },
+  "val_candidate_recall": 0.9769,
+  "val_stage1_recall": 0.9811,
+  "val_oracle_f05": 0.9928,
+  "cands_per_s1": 40.0,
+  "test_matches": 5733245,
+  "test_s1_with_match": 1629322,
+  "silver_acceptance_test": {
+    "France": 0.9809,
+    "India": 0.9209,
+    "US": 0.9936
+  },
+  "silver_acceptance_v3": {
+    "France": 0.9518,
+    "India": 0.9191,
+    "US": 0.9935
+  },
+  "france_empty_share": {
+    "v3": 0.0967,
+    "v4": 0.0617
+  },
+  "validator": "PASS (--check-ids, run manually; notebook silver cell crashed after writing outputs, P17)",
+  "archived_at": "2026-09-26T10:37:12",
+  "note": "notebook code/src/v4.ipynb (as run; silver-report cell fixed afterwards)"
+}
