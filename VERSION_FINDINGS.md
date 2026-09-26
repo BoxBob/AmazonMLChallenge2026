@@ -54,6 +54,8 @@ Each row: the first-principles reason for the change, what we did, what it measu
 | T19 | France threshold probe (controlled leaderboard experiment) | France can't be validated offline, so let the leaderboard measure it with *one factor changed*: US/India fixed at v4, only France's threshold moves | France thresholds 0.55 / 0.625 / 0.70 (= v4) / 0.775 / 0.85; files in `output/lb_probe/` | the whole range moves French matches only −2.2% … +1.9% (812k–846k vs 831k), so the leaderboard effect may be ≤0.001; the extremes 0.55 vs 0.85 are the informative pair | **leaderboard pending** | `v6-probe` |
 | T20 | France-only IDF (Splink-style term frequency within the linked population) | Rare-word features used IDF over the whole test split; templated French words look ~1.9 nats rarer than they are among French records, so shared template words pass for identifying ones | IDF recomputed on French records for French pairs; model unchanged | confirmed shift: `club` 4.49 → 2.57, `lille` 6.12 → 4.19. Changes ~40% of French entities' lists: **+22.8k pairs, 94% with a *different name* at the *same address*** (`OR Club SARL` ↔ `OR Ecole SARL`, `Team Collectif` ↔ `Team Groupe`), −8.9k pairs (common names, 41.5 S1 sharing the name). Caveat: training used IDF over US+India, i.e. ~0.5–0.9 above in-country IDF, so France-only IDF is ~0.7 too *low* (lenient) and the old global IDF ~1.4 too high | **leaderboard 0.971 (−0.002 vs v4) → rejected.** With v5 (0.972, also +23k such pairs) this is consistent evidence: **in France a descriptor swap at the same address is mostly a *different* business** | `v6-probe` |
 | T21 | Remove French descriptor swaps from v4 | Two independent variants that *added* same-address descriptor swaps both lost score, so the descriptor word identifies French businesses; v4 carries over the US habit (swaps 94% true there) | from v4's France output, drop pairs at the same address (house no. + street word) whose names share a word but differ by *vocabulary* words (each ≥300 French occurrences, not typos or legal forms), e.g. `tl ecole` ↔ `tl club`, `crin ecole` ↔ `crin pharmacie` | 21,148 French pairs removed (2.5% of France's matches, 20,053 entities); a first broad detector (66.5k) also caught garbled typos and abbreviations and was discarded | **leaderboard pending** (`output/lb_probe/matching_results_fr_noswap_f300.tsv`) | `v6-probe` |
+| T22 | **France Evaluation Suite (FES)**: a France benchmark without French labels | France can only be labelled *in aggregate* by the leaderboard, so extract the most information from each result: describe each variant by *which classes of pairs it adds or removes*, value each pair with marginal effects measured exactly on validation, and fit only the France-specific unknowns to leaderboard results | marginals on validation: add true +0.105, add false −0.253, remove true −0.093, remove false +0.267, so the break-even precision is ~71% to keep and ~74% to remove; class precisions from validation per zone (added p 0.3–0.7, removed p 0.7–0.95); French SWAP precision fitted to the IDF result | reproduces IDF (−0.0018 vs −0.002) and **held-out** v5 (−0.0017 vs −0.001); French swap precision ≈ **23%** (US/India comparable class 45%). Forecasts: **noswap +0.001 … +0.003**, t0.55 −0.001, t0.85 ≈ 0 | adopted as the France benchmark (`code/experiments/fes.py`) | `v7` |
+| T23 | Same-name blank-address pairs in France (FES-guided check) | With a blank address, precision ≤ ~1/k when k S1 entities share the name; France accepts this class at 2.4× the validation rate | validation precision by k; count of v4-accepted French pairs by k | validation: k=1 98% true (accepted precision 0.989), k≥2 already rejected by v4; France: 16,940 of ~18,000 accepted pairs have k=1 → correct | **rejected** (no change; avoided a harmful probe) | `v7` |
 | T14 | Language-independent keys | What identifies a business is the *whole* name at a *number*, not the first word of the name | `ex_name_hn`, `ex_hn_street` + silver report | validation +0.15% recall (nothing to gain there); **test France: +0.65 new name+number pairs per S1** | adopted | `v4` |
 
 ## Pitfall ledger
@@ -466,3 +468,28 @@ France is still ~0.06 below the labelled countries and remains the largest sourc
 0.027 gap to a perfect score, but ~0.009 of the ~0.010 gap to our validation level. The leave-one-country-out study
 (T15) predicts about 0.039 of *model-transfer* loss for an unseen country, independent of blocking. That is the next
 target: v5 self-training.
+
+---
+
+## France Evaluation Suite (FES): the France benchmark
+
+**Why it's needed.** The US and India keep their benchmark unchanged: macro F0.5 on the same 100k labelled validation
+entities (hold-out halves A/B). France has **no labels**, is 15% of the test, and follows different naming semantics.
+Before FES, the only French signal was a public-leaderboard submission: 3 decimals, noisy, limited in number.
+
+**Components.**
+
+| Component | What it measures | Source of truth |
+|---|---|---|
+| FES-1 Marginal values | score change per pair added/removed, true/false | exact, on US/India validation (country-independent arithmetic of per-entity F0.5) |
+| FES-2 Pattern classes | what kind of French pairs a variant changes (A same name+address, B same name/other address, C trade name, D variant, E same name/blank address, G different name/blank address, **SWAP** descriptor swap at the same address, F other) | raw record attributes |
+| FES-3 Class precision | share of a class's changed pairs that are true | validation per decision zone for country-independent classes; **leaderboard fit** for France-specific ones (SWAP) |
+| FES-4 Forecast | expected leaderboard Δ of a variant vs v4 = Σ class (added, removed) × precision-weighted marginal value | combines 1–3 |
+| FES-5 Guards | silver acceptance (unique name+number pairs), entities with no match, matches per entity | label-free per-country monitors |
+
+**Validation of the benchmark itself.** It must reproduce leaderboard results it was *not* fitted on. Fitted on the IDF
+variant, it predicts v5 at −0.0017 against an actual −0.001 (the ±0.0005 rounding band plus 0.0002). Each new leaderboard result is added to the fit.
+
+**How it's used.** Every France idea is first scored by FES. Only variants with a clearly positive forecast are submitted,
+and each submission then refits FES. This has already (a) chosen `fr_noswap_f300` over the threshold probes and
+(b) rejected the blank-address rule (T23) without spending a submission.
