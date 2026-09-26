@@ -13,7 +13,7 @@ way: F0.5 is computed per S1 entity, singletons included, and then averaged.
 | v1 — baseline | `code/src/baseline.ipynb` | **0.8871** | 83.6% | 0.9275 | 39.7 |
 | v2 — improved | `code/src/improved.ipynb` | **0.9721** | 97.0% | 0.9906 | 30.0 |
 | v3 — towards SOTA | `code/src/v3.ipynb` | **0.9811** (hold-out half B: 0.9813); **leaderboard 0.965** | 97.6% | 0.9923 | 40.0 |
-| v4 — France blocking fix + ambiguity | `code/src/v4.ipynb` | **0.9826** (hold-out 0.9826); France silver 0.952 → **0.981**, France empty 9.7% → **6.2%** | 97.7% | 0.9928 | 40.0 |
+| v4 — France blocking fix + ambiguity | `code/src/v4.ipynb` | **0.9826** (hold-out 0.9826); France silver 0.952 → **0.981**, France empty 9.7% → **6.2%**; **leaderboard 0.973** (+0.008 over v3) | 97.7% | 0.9928 | 40.0 |
 
 \* The score a perfect classifier would get on that version's candidate set. It is the ceiling
 that blocking allows.
@@ -438,3 +438,22 @@ from 0.952 towards the ~0.99 seen in labelled countries.
 **Lesson:** a validation score only certifies the distribution it was drawn from. When the test contains a population
 we can't label, every run needs **label-free monitors** (prediction statistics, fingerprints, silver labels), and the
 design must avoid **language-specific assumptions** (here: "the first name token is distinctive").
+
+### Leaderboard check of the France diagnosis (v4)
+
+v4 changed almost nothing for the US and India (their silver acceptance and prediction statistics are unchanged)
+but fixed French blocking. The leaderboard moved **0.965 → 0.973 (+0.008)**, which confirms P14 as a real cause of the
+validation/test gap.
+
+Implied per-country picture. Assume US/India score on test what they score on validation (~0.985 / ~0.979) and use
+the test mix (US 38.3%, India 46.8%, France 15.0%):
+
+| | v3 | v4 |
+|---|---|---|
+| leaderboard | 0.965 | 0.973 |
+| implied France macro F0.5 | ~0.88 | **~0.92** |
+
+France is still ~0.06 below the labelled countries and remains the largest source of loss. It is ~0.009 of the total
+0.027 gap to a perfect score, but ~0.009 of the ~0.010 gap to our validation level. The leave-one-country-out study
+(T15) predicts about 0.039 of *model-transfer* loss for an unseen country, independent of blocking. That is the next
+target: v5 self-training.
