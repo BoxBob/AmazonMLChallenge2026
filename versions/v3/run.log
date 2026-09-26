@@ -1,0 +1,1720 @@
+Input Notebook:  code/src/v3.ipynb
+Output Notebook: work/v3/v3_executed.ipynb
+Working directory: code/src
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+Executing notebook with kernel: python3
+Executing Cell 1---------------------------------------
+Ending Cell 1------------------------------------------
+Executing Cell 2---------------------------------------
+torch 2.11.0+cu128 | GPU: NVIDIA GeForce RTX 3050 6GB Laptop GPU | xgboost 3.4.1 | pandas 3.0.6
+
+Ending Cell 2------------------------------------------
+Executing Cell 3---------------------------------------
+Ending Cell 3------------------------------------------
+Executing Cell 4---------------------------------------
+Ending Cell 4------------------------------------------
+Executing Cell 5---------------------------------------
+Ending Cell 5------------------------------------------
+Executing Cell 6---------------------------------------
+[      2s] train S1 400,000 | val S1 100,000
+
+Ending Cell 6------------------------------------------
+Executing Cell 7---------------------------------------
+Ending Cell 7------------------------------------------
+Executing Cell 8---------------------------------------
+[      2s] lexicon sizes: name 802, address 47
+
+{'elelpi': 'llp', 'eses': 'ss', 'phud': 'food', 'praivet': 'private', 'vemcrs': 'ventures', 'hotl': 'hotel', 'emtrpraijej': 'enterprises', 'investmemt': 'investment', 'svstik': 'swastik', 'solyusms': 'solutions', 'nyu': 'new', 'mam': 'maa', 'lojistiks': 'logistics', 'sn': 'sun', 'sophtveyr': 'software', 'phrst': 'first', 'sevn': 'seven', 'eksports': 'exports', 'pra': 'pvt', 'li': 'ltd', 'solyusns': 'solutions', 'marketimg': 'marketing', 'prajekts': 'projects', 'prodyusr': 'producer', 'sauth': 'south'}
+{'tmilnatu': 'tamil', 'uttr': 'pradesh', 'prdes': 'pradesh', 'hriyana': 'haryana', 'mharastr': 'maharashtra', 'krnatk': 'karnataka', 'gujrat': 'gujarat', 'pscimbng': 'bengal', 'kerlm': 'kerala', 'rajsthan': 'rajasthan', 'odisa': 'orissa', 'telmgan': 'telangana', 'mdhy': 'pradesh', 'pmjab': 'punjab', 'amdhrprdes': 'pradesh'}
+
+Ending Cell 8------------------------------------------
+Executing Cell 9---------------------------------------
+Ending Cell 9------------------------------------------
+Executing Cell 10--------------------------------------
+Future Producer Private Limited -> ('future producer pvt ltd', 'future producer', 'pvt ltd')
+\u0907\u0902\u091f\u0930\u0928\u0947\u0936\u0928\u0932 \u092c\u093e\u092c\u093e \u0938\u0930\u094d\u0935\u093f\u0938\u0947\u091c \u092a\u094d\u0930\u093e\u0907\u0935\u0947\u091f \u0932\u093f\u092e\u093f\u091f\u0947\u0921 -> ('international baba services pvt ltd', 'international baba service', 'pvt ltd')
+SCI Ptit Àmicale -> ('sci ptit amicale', 'ptit amicale', 'sci')
+maurewilliamscolombier.com -> ('maurewilliamscolombier', 'maurewilliamscolombier', '')
+('20 158 1 a r b nagar shamshabad rangareddy tg', '', '20', '', '20-158/1')
+('1260 jordan creek pkwy w des moines ia', '01260', '1260', '1260 jordan', '')
+
+Ending Cell 10-----------------------------------------
+Executing Cell 11--------------------------------------
+[     15s] train records: 12,527,040  countries=['US', 'India']  native names: 10.95%
+
+[     28s] test records: 11,702,133  countries=['US', 'France', 'India']  native names: 14.58%
+
+Ending Cell 11-----------------------------------------
+Executing Cell 12--------------------------------------
+Ending Cell 12-----------------------------------------
+Executing Cell 13--------------------------------------
+Ending Cell 13-----------------------------------------
+Executing Cell 14--------------------------------------
+Ending Cell 14-----------------------------------------
+Executing Cell 15--------------------------------------
+Ending Cell 15-----------------------------------------
+Executing Cell 16--------------------------------------
+Ending Cell 16-----------------------------------------
+Executing Cell 17--------------------------------------
+Ending Cell 17-----------------------------------------
+Executing Cell 18--------------------------------------
+[     50s] ground truth: 2,206,821 S1, 7,638,365 true pairs
+
+Ending Cell 18-----------------------------------------
+Executing Cell 19--------------------------------------
+Ending Cell 19-----------------------------------------
+Executing Cell 20--------------------------------------
+[     88s]   train: blank-address name kNN done for 500,000 queries
+
+[     95s]   exact key ex_squash: 1,841,739 pairs
+
+[     97s]   exact key ex_pc_first: 69,546 pairs
+
+[    102s]   exact key ex_first_hn: 2,382,435 pairs
+
+[    107s]   exact key ex_first2: 3,323,910 pairs
+
+[    109s]   exact key ex_cnum: 402,471 pairs
+
+[    113s]   exact key ex_hn_next: 1,828,749 pairs
+
+[    118s]   exact key ex_blank_squash: 616,896 pairs
+
+[    526s] VAL stage-1 blocking recall 0.9801 (v2 0.9750, baseline 0.8364), ~140 cands/S1 before prefilter
+
+[0]	val-aucpr:0.87916
+
+[100]	val-aucpr:0.93450
+
+[200]	val-aucpr:0.93616
+
+[300]	val-aucpr:0.93655
+
+[399]	val-aucpr:0.93670
+
+  keep top  20: retains 0.9896 of blocked true pairs
+
+  keep top  25: retains 0.9917 of blocked true pairs
+
+  keep top  30: retains 0.9932 of blocked true pairs
+
+  keep top  35: retains 0.9944 of blocked true pairs
+
+  keep top  40: retains 0.9954 of blocked true pairs
+[    650s] prefilter keeps top 40 candidates per S1
+
+93
+Ending Cell 20-----------------------------------------
+Executing Cell 21--------------------------------------
+Ending Cell 21-----------------------------------------
+Executing Cell 22--------------------------------------
+[    696s] IDF vocabularies: train core 282,499, addr 555,271
+
+0
+Ending Cell 22-----------------------------------------
+Executing Cell 23--------------------------------------
+Ending Cell 23-----------------------------------------
+Executing Cell 24--------------------------------------
+[    786s]   val: 50,000/100,000 S1 done
+
+[    866s]   val: 100,000/100,000 S1 done
+
+[    944s]   train: 50,000/400,000 S1 done
+
+[   1023s]   train: 100,000/400,000 S1 done
+
+[   1100s]   train: 150,000/400,000 S1 done
+
+[   1163s]   train: 200,000/400,000 S1 done
+
+[   1215s]   train: 250,000/400,000 S1 done
+
+[   1268s]   train: 300,000/400,000 S1 done
+
+[   1321s]   train: 350,000/400,000 S1 done
+
+[   1373s]   train: 400,000/400,000 S1 done
+
+[   1411s] train: final candidate recall 0.9756, 40.0 cands/S1, oracle macro-F0.5 0.9924  (baseline val: 0.8364 / 39.7 / 0.9275)
+
+[   1412s] val: final candidate recall 0.9757, 40.0 cands/S1, oracle macro-F0.5 0.9923  (baseline val: 0.8364 / 39.7 / 0.9275)
+
+64
+Ending Cell 24-----------------------------------------
+Executing Cell 25--------------------------------------
+Ending Cell 25-----------------------------------------
+Executing Cell 26--------------------------------------
+[0]	val-logloss:0.22035	val-aucpr:0.98063
+
+[250]	val-logloss:0.01005	val-aucpr:0.99751
+
+[500]	val-logloss:0.00948	val-aucpr:0.99774
+
+[750]	val-logloss:0.00934	val-aucpr:0.99779
+
+[909]	val-logloss:0.00932	val-aucpr:0.99779
+
+[   1556s] fold 0: best iteration 849
+
+[0]	val-logloss:0.22031	val-aucpr:0.98146
+
+[250]	val-logloss:0.01002	val-aucpr:0.99753
+
+[500]	val-logloss:0.00947	val-aucpr:0.99776
+
+[750]	val-logloss:0.00935	val-aucpr:0.99780
+
+[827]	val-logloss:0.00934	val-aucpr:0.99780
+
+[   1686s] fold 1: best iteration 767
+
+[0]	val-logloss:0.22013	val-aucpr:0.98161
+
+[250]	val-logloss:0.00975	val-aucpr:0.99766
+
+[500]	val-logloss:0.00914	val-aucpr:0.99790
+
+[750]	val-logloss:0.00894	val-aucpr:0.99797
+
+[1000]	val-logloss:0.00886	val-aucpr:0.99800
+
+[1225]	val-logloss:0.00883	val-aucpr:0.99800
+
+[   2330s] stage-1 matcher best iteration 1165
+
+pf                      4476.2
+pf_rank                  852.3
+num_only_c               402.7
+addr_blank_c             362.8
+cs_addr_unique_c         297.3
+hn_contains              256.8
+num_only_q               237.1
+t_num_jacc               152.0
+a_tset                   142.5
+cnum_eq                  118.6
+t_onlyc_n                118.2
+cs_addr_rare_overlap      97.5
+cs_name_unique_c          90.1
+rel_a_tset                89.6
+t_wjacc_a                 84.1
+squash_contains           75.5
+num_min_lev               71.6
+n_jw_squash               64.1
+first_eq                  62.8
+hn_lev                    62.5
+n_full_tset               62.4
+suffix_eq                 62.3
+n_partial                 54.4
+hn_eq                     52.8
+name_num_diff             47.0
+
+Ending Cell 26-----------------------------------------
+Executing Cell 27--------------------------------------
+Ending Cell 27-----------------------------------------
+Executing Cell 28--------------------------------------
+[0]	val-logloss:0.21582	val-aucpr:0.99722
+
+[250]	val-logloss:0.00775	val-aucpr:0.99839
+
+[469]	val-logloss:0.00771	val-aucpr:0.99841
+
+[   3199s] group-context model best iteration 409
+
+39
+Ending Cell 28-----------------------------------------
+Executing Cell 29--------------------------------------
+Ending Cell 29-----------------------------------------
+Executing Cell 30--------------------------------------
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]
+[   3226s] cross-encoder loaded from D:\AmazonMLChallenge2026\work\v3\ce_model
+
+[   3310s] cross-encoder scored 127,831 validation band pairs (3.2%)
+
+[   3310s] blend weights (GBDT, cross-encoder) [[0.7310000061988831, 0.39899998903274536]] bias [0.04699999839067459]
+
+Ending Cell 30-----------------------------------------
+Executing Cell 31--------------------------------------
+Ending Cell 31-----------------------------------------
+Executing Cell 32--------------------------------------
+[   3329s] stage-1 matcher: global threshold 0.775 \u2192 macro F0.5 0.9752 | per-country {'India': np.float64(0.7), 'US': np.float64(0.775)} \u2192 0.9752
+
+[   3347s] group-context model: global threshold 0.7 \u2192 macro F0.5 0.9777 | per-country {'India': np.float64(0.7), 'US': np.float64(0.675)} \u2192 0.9777
+
+[   3365s] blend: global threshold 0.725 \u2192 macro F0.5 0.9811 | per-country {'India': np.float64(0.725), 'US': np.float64(0.725)} \u2192 0.9811
+
+[   3369s] HOLD-OUT CHECK: blend tuned on half A (t=0.725) -> half B macro F0.5 = 0.9813
+
+[   3370s] VALIDATION macro F0.5 = 0.9811 using blend, global thresholds 0.725 (v2 0.9721, baseline 0.8871)
+
+           mean   size
+country               
+India    0.9774  39832
+US       0.9836  60168
+             mean   size
+n_true                  
+singleton  0.9880   5578
+1          0.9348   5341
+2-3        0.9811  41080
+4-5        0.9853  36444
+6+         0.9862  11557
+
+16
+Ending Cell 32-----------------------------------------
+Executing Cell 33--------------------------------------
+Ending Cell 33-----------------------------------------
+Executing Cell 34--------------------------------------
+[   3422s]   test: blank-address name kNN done for 1,732,544 queries
+
+[   3429s]   exact key ex_squash: 6,775,778 pairs
+
+[   3430s]   exact key ex_pc_first: 161,403 pairs
+
+[   3436s]   exact key ex_first_hn: 8,294,028 pairs
+
+[   3442s]   exact key ex_first2: 11,768,783 pairs
+
+[   3443s]   exact key ex_cnum: 1,577,700 pairs
+
+[   3447s]   exact key ex_hn_next: 5,258,976 pairs
+
+[   3452s]   exact key ex_blank_squash: 1,644,949 pairs
+
+[   3837s]   test scored 50,000/1,732,544 S1 (2,000,000 candidate pairs)
+
+[   3979s]   test scored 100,000/1,732,544 S1 (4,000,000 candidate pairs)
+
+[   4154s]   test scored 150,000/1,732,544 S1 (6,000,000 candidate pairs)
+
+[   4320s]   test scored 200,000/1,732,544 S1 (8,000,000 candidate pairs)
+
+[   4469s]   test scored 250,000/1,732,544 S1 (10,000,000 candidate pairs)
+
+[   4599s]   test scored 300,000/1,732,544 S1 (12,000,000 candidate pairs)
+
+[   4731s]   test scored 350,000/1,732,544 S1 (14,000,000 candidate pairs)
+
+[   4859s]   test scored 400,000/1,732,544 S1 (16,000,000 candidate pairs)
+
+[   4987s]   test scored 450,000/1,732,544 S1 (18,000,000 candidate pairs)
+
+[   5114s]   test scored 500,000/1,732,544 S1 (20,000,000 candidate pairs)
+
+[   5242s]   test scored 550,000/1,732,544 S1 (22,000,000 candidate pairs)
+
+[   5369s]   test scored 600,000/1,732,544 S1 (24,000,000 candidate pairs)
+
+[   5497s]   test scored 650,000/1,732,544 S1 (26,000,000 candidate pairs)
+
+[   5624s]   test scored 700,000/1,732,544 S1 (28,000,000 candidate pairs)
+
+[   5753s]   test scored 750,000/1,732,544 S1 (30,000,000 candidate pairs)
+
+[   5880s]   test scored 800,000/1,732,544 S1 (32,000,000 candidate pairs)
+
+[   6007s]   test scored 850,000/1,732,544 S1 (34,000,000 candidate pairs)
+
+[   6135s]   test scored 900,000/1,732,544 S1 (36,000,000 candidate pairs)
+
+[   6262s]   test scored 950,000/1,732,544 S1 (38,000,000 candidate pairs)
+
+[   6389s]   test scored 1,000,000/1,732,544 S1 (40,000,000 candidate pairs)
+
+[   6516s]   test scored 1,050,000/1,732,544 S1 (42,000,000 candidate pairs)
+
+[   6643s]   test scored 1,100,000/1,732,544 S1 (44,000,000 candidate pairs)
+
+[   6770s]   test scored 1,150,000/1,732,544 S1 (46,000,000 candidate pairs)
+
+[   6897s]   test scored 1,200,000/1,732,544 S1 (48,000,000 candidate pairs)
+
+[   7028s]   test scored 1,250,000/1,732,544 S1 (50,000,000 candidate pairs)
+
+[   7179s]   test scored 1,300,000/1,732,544 S1 (52,000,000 candidate pairs)
+
+[   7337s]   test scored 1,350,000/1,732,544 S1 (54,000,000 candidate pairs)
+
+[   7486s]   test scored 1,400,000/1,732,544 S1 (56,000,000 candidate pairs)
+
+[   7633s]   test scored 1,450,000/1,732,544 S1 (58,000,000 candidate pairs)
+
+[   7778s]   test scored 1,500,000/1,732,544 S1 (60,000,000 candidate pairs)
+
+[   7921s]   test scored 1,550,000/1,732,544 S1 (62,000,000 candidate pairs)
+
+[   8066s]   test scored 1,600,000/1,732,544 S1 (64,000,000 candidate pairs)
+
+[   8207s]   test scored 1,650,000/1,732,544 S1 (66,000,000 candidate pairs)
+
+[   8352s]   test scored 1,700,000/1,732,544 S1 (68,000,000 candidate pairs)
+
+[   8448s]   test scored 1,732,544/1,732,544 S1 (69,301,760 candidate pairs)
+
+[   8448s] wrote D:\AmazonMLChallenge2026\output\candidate_pairs_v3.tsv (1,732,544 rows, 40.0 candidates per S1)
+
+[   8511s] wrote D:\AmazonMLChallenge2026\output\matching_results_v3.tsv: 5,622,610 matches, 1,619,263 of 1,732,544 S1 with >=1 match
+
+            S1  with_match  share
+India   809986      760626  0.939
+US      663106      624283  0.941
+France  259452      234354  0.903
+
+Ending Cell 34-----------------------------------------
+Executing Cell 35--------------------------------------
+ML Challenge 2026 \ufffd submission validator
+  test dir: D:\AmazonMLChallenge2026\dataset\test
+  required S1 entities: 1732544
+  valid S2/S3 match IDs: 9969589
+  matching_results_v3.tsv: 1732544 rows (113281 empty, 1619263 non-empty).
+  candidate_pairs_v3.tsv: 1732544 rows (0 empty, 1732544 non-empty).
+
+PASS \ufffd no blocking issues found. Safe to submit.
+ 
+[   8609s] done
+
+Ending Cell 35-----------------------------------------
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_74da47e86bc0415f88a754c320f4b641_81897584eafd4383b5aeffe668f81f01'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_b7f9b7af39ca493397b57bb3b1c7ac45'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_92cdf2c4e6db4946a034bfd7abd84d22_68c9da30025e46a5a5910f3773c5056e'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_90a88acf373d42c6b51120d042917102'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_c430d21df8634d359d3ba94513e1c13c_ffff4793ade3443d8db8b2b8eb10edeb'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_39c302ca260a45aea39fd05fadc460c5'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d8af0bf4c6894a359884795616744a7d_4e3bd317bcc04ca2b29226bb898e7230'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_f08cb44a15b0419c8658328a76f3015f'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_1ce71742ed9c4ab293f1156af77b94d5_62bbbe4326e9442a8269956f9c00924f'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_a709249598864351b7cec81ab977b2b2'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_6965ad58f4484de19a952e35463d66a0_bee83f8eb4804288933c535a87a3d322'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_cda4c319a2b64102bb507b4aea63c524'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d39454735d5a4ec2bfb0849cfccc9004_c6632dbb48454514a30e50e02d4e6f15'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_0a969b39993a49a9b28c53e4b6c4e690'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_4476ff91b37e49708f403ce87eb8eaa6_327b73977fe5457d9fc5093f83fa5a75'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_cb33c0751f6740848065361fb7f5f31c'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_7128f88779a84e6aa848875d2a661f62_4fba1f809dff4d18a42362764042af17'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_ed9b4e82f4e640fd93cbbeae0aab9c20'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_2748f20714a840d7ba97e706f104202d_87eaae0d64334459981ce866be52c72d'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_95ab80e0957d497ea4cb99d058020c43'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_f2ed25c316be4a9499642288cbdb7bf3_537dd5bde22e44bbb26b1e0c661b5935'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_45704fcdd1944c96965439078ae2a2f2'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_7d87afabd71d4a53a2e7717dbe0a3351_3110ff210c744c8a9756cf73f32ef4d5'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_c65031e75ada46ee94794e4ad4d143ee'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_7066c84fcfcb4268bb3a06f71d036f6f_31643dc7277e40c5a98d99dc191f6421'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_5c7e4d4849d54536a1b8d897779cf6ef'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_552510b6fcba41008fe18ac1d138604e_c8f9385d6f744ccaa13dd2c89ea3f4c8'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_d61c0c8a78a04c3abfc08b270339cebd'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_953f826924e0448aaa71478d7cf052f3_f631685d79194e62a2e973ad956907dc'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_2061a3d5058c4863a895e7ea6f1835fa'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_bce9787843e74144bf3657991f173a03_f077d2f5e93b48ac8319e71253a9e628'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_eeb41990b4104eb88c5934cb62fe6000'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_3ee9e9ed930642d19e327c58af4ce542_5304824c34664d80811e74ff97e3fb2a'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_045632af79f340dab32fad80185b6ed5'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_9561902a4cae47bba6a067a987bf1c2b_54db93ac9daa4d7e86e949d0278b6d70'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_6036d61e4faf48df95c4d085b6e04e31'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_28325d276da14a348b68f28d3f2f9516_c52e796e34534205a22636e1b169fc5e'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_b4fab064df24425e9e0c318083e8fb74'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_cdbf6c7b4b2440729ea700aa1b84f9d6_4e2a94160b5740288957da58b84bb710'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_46b618799ae64a9ca1505b495737ff6a'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_72fde54262fd446ba1ff6265e1060e3c_6fecde8f1b3145a5a87fafaa18e086bf'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_8b04408e123d4319b02a2547d4c68697'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_6ce3727ffe38498ca3e932daf8c3b3e7_15cfb82cfddb4a6bbd9359ab46bf6987'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_7e6ff0d7f4c34ffd882a9a1bd7a4ccc5'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_8bec7ef41cda4202bdc8f6c0676ee32d_8c81f99ce1e04ee2b6915e4c6b15c54b'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_475d9d73978f4babbba938edb6023975'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_f301b3c74d8e4bb9b0f4f0f6b0cbd115_d7d5136b80814842a2c21042028a2498'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_73911558f4324602913b41c15dc071cb'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_b8ccf9e7a0c142e097e7fffa79ed9b19_ab50fffd6c8b40a1aa0e6977f001ee1b'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_c2cd39efff0d420db388284018ceae78'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_f0d0f34b19e540b4aa74dbb3b9491964_358733b71bce466fbe7c03c05d70c801'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_271507ad52d74917a6b15374433dea1f'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_fbf32ac9c4e5490d93b7029e4810cb77_db621a5ddfd141b2a1e4fb1f6a590ff0'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_0398693d1a2d4cdfa488d8841458193d'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_f082995caa9c429cb3b1d5ae28ba82ad_54a20cb1bee6455ea19b1fb669051b5e'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_23fe7b538b4845759e19ccc9053f2122'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_37969a57b44d4758b61ab0d5c1b6b0d8_c5ba421556d84dabb22c0140da1d41b0'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_bdc204673db6459490eb41723329c01a'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_c1de42428817492f8471c22e039a849e_15b3b0ed5b744d5b800ab93586e249a9'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_fcb075df779344b29f5c41f3c7d5c974'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_6edab0eb0bf34149b8e7fe1889e3ca3d_801b3c3807fb47148be96a5fe7299231'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_32da7c39d3a44175881906618bc873ba'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_5281f270a49143ab8c8a5ca713de309a_9f5d34d2a31b4dea9de7483ae06430b1'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_274cea674f874560ab0e8118d93b9c14'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_ae572ec1124946d2a66976369afc761a_79c18e89487c448a95a8a71b6eafc756'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_d280cafcffae44a28218c8da878cabfe'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_1f514660212748afbfb3c48da7257a98_22d552281f8c4021b8011109868b5350'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_7b6be162a2774d96baf1a144eb371678'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_043077cbf01e4fdda14ea34f62a9ca59_4c88a2f0ee924068801e43107ed15d87'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_8d33fa08a39343d69261e6d795f449fc'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_a96de1cc089e465e8761d2e4afb704be_0d63e3c931b44bbf89299a2456cdaf2f'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_e10a5b34ee8c4397a531c63018cbe9f3'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_9191945acccd4b81bad874c3921981f4_2009f9171f5846fd834d926035c07642'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_4b7551e68db14a088affb2de94912c8a'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_3ba1730583554d62bcb3c3fab266e1c4_20d594df9476402fbe059f78d9d7fcf9'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_775be3bdd5da491baf805615dd2cd093'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_287fe04a8caa4e2f840c6d47b2ef3cf1_35eb65fe12834a2896def63f4ac6cd2e'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_8a862e69819a4e29817b17c0e3d52279'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_0d9a0443f73946c78f3164e0d0ba6056_c3397485abd44a228f74dddc0332d5aa'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_758b32dafea949e7a3c7c5966b5ed169'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_5000402ab6044e3ea8a1857c9fa6aed3_2ddc4326c7f445b68c0743e5c716c034'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_bfc57b9881124610a725f0642fc0cce7'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_327f433d711641238e5e5eb2509d2003_f2fdb88094b74187b7cd44b87ecf189c'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_e2332b8611f0402fa63095aacf748e96'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_cd33c44a9abc4041b78462957a9dfc58_f8aac669ef7b45e68f710afee04a3002'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_427257f570f94e79aadee9026c9dcc3e'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_5a1079cee0284f4b913760521306521e_a1c302416a3a4b5c85800926cf776bf2'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_d15df6354e9846d6b40a52e2ac41db16'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_1261d00608994cb6b8472cff3f5e0233_0f716d4f59754b79b27dfa1a83aabfd9'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_c4120e9eab6a4791aa84dc79cf4e0407'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_faf1a76bf7b44aacb0d15b0f2eb03b68_f5d03f0b03f44c57be72574ad94cd484'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_0221c21832234f07bf0a0ce2a09dec87'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_9581b932f6d9495e934944e2c0b4e002_aaa02c113d8844d58a42a02352d0dee5'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_cbff609b21a540b383d0a69c6727b1f7'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_1d97bdd575f8433580ec6bcc19fd52de_facc100c79034fb0a02fec7efa1a30d5'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_6e719ea865b04c8a989904165692dd30'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_f2a8580be1714eb8858d5340bc667a56_1abc9df68e974cf78d527f93752a03d7'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_16ca36b50b53459aa81786fc6900fa7d'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_8ea6fd2a7b2a46ccacf215b7c03c7cc1_ceb540dcb9904edc8065a348f3ca701d'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_8c482ed8db7c4611b81c257649763177'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_6ee23a3b968549ecbb507ba41e4922b8_e36d2ed346e8499a848affff0ec0d4fc'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_67a92b22feb64d7fb25a7c0b3cf0edf3'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_b1f50d26b8e1406f92b277511cb322c6_e214ec1a9be743b2ab4cbbbff576bc01'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_9e4dbd6b9b64447eb88db7e6f65f59b2'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_5713b3f94cc24f7f8a00980a0d43e259_cb29ad2384b14d538db62a89af91c07b'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_0e77883d07c4424b986dc0a79259ab28'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_455c670afd564575af5991a1a1911640_65905f24487f42c797c1343ec54645d0'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_4e78983cfa0f4b6ab67e2899e3ea31f9'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_b29b801ff9f549409c80f979d91c3c4c_8ab66ccb1b054811a9ef85bee55e4242'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_47985cdc38364c6bbae82834113d1a2a'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_0d3dd4270ca948f1b00c8b9bddc6f53d_1db4b331327a421b83637b96fafd8173'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_0d38f64f6a5a4e5bae4d42449d28d617'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_058b5ea254aa4e55bad8b83be9697d9a_3f52cb81d1954ef6b26c1087613d6151'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_aafd48102eb9427a9297d83b76c75efa'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_2e670af9fcd446dfb619b8b9bfc3e503_5c0b76ba45634dd7af56abcdf9af613c'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_1151e25a2ff64262b377a6b498f4b3b8'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_abb8db849ba048dba48569d8e7e3deff_1e681d84c52845779d06d5705bd1f982'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_a29ae0b7a9764b65a9d8cf6a2d80edc7'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_8036ef244b8c4ab6ace2a6297f407583_dd4eef13f10a47f584d0edb0824971d9'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_c79c70d5781b4d499a13c2697a0bc785'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_6098bf66690a46e18fd1e289a208485a_8648e58bc9884368a184e92cedb18d28'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_50e43544b03e4b85a8981c396cf81faa'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_4c372c0bb009472e81d283bd877e2ee3_29cc27021db04f80a95ddc0885ca8589'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_2c216ac7b1b24342b390f9dd3be572b9'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_7bb74c5579a34b24ab7c7e4747e97ad9_da2a560d96f74cf8a2ecb7d23bd77ae0'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_0024ed0454bc4cf483357fcd497db78f'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_08f84faebca240be813051df9cf4e8ec_50a06bf9c60942f9ad15ff17eeca83b5'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_83dc500cd8a04671a50302a05b9a40ac'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_45e0cc31d73545269c6eef23ceea19af_3e0314de4fa9406987afadb2ff5ac430'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_d73943c5708644228c740117d6a9dba2'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_eb999581d7ca4e4dbbb04fd0be6264dc_7aa91781c22c4d87ac96172b85e5c832'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_857140fc47de4ccc90bde5396dff4b42'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_f333baedb14747fdba3408c47aa5b3cd_ba06324c75ba410789c59d18f871eb8a'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_a222e19e8453407ea0d8af6df329fa76'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_5715e651afaa4f359594d201c9ee9452_068b5290ced145ce8f3a231c74a1d442'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_9948f8761ba44062bece7e18effe682b'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_92802c8be6e14cf3a7e2b471af5578e2_42c050423fe444568073d691e02aa15c'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_1056fa44b4be41d1a74912e712af180a'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_38f47c8193514ad3b98e823d044a44a8_c4d9629c9c794fb18d359556715c12eb'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_6f44d49667e34d5db57344dcd06186c0'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_9d61992786d2459cae82b15c52e8689d_d7d3bc3513aa4764b37c19ada3ab69b0'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_855c3c9c4cb54b269a372355a946166a'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_6963e8acab1d4e179a13c7e1e0e454ea_2a8a888cca3440a184c0bc1044b25934'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_f93c0aeb97c84001a5d74da1408b8572'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_715c7bf23e8f4a1b9d8250dcc3d0176c_84e886d7405f42e994af0f8b6ec1a5e8'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_7a4b2034c0d94796833ef67521ab8c24'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_9443454410324fc18a703bb29eb494ed_47190fd6b6444e80b6c2e5d6de177659'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_ca130976aa4a468c9dd58fc753374bfc'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_b8230ba7d28c4ac58580820a06abbbd6_042a32a903cc4f26b36786a4d76be73f'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_c3e202cc2d6e409fadb33cad0d9c9972'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_b1db80993d4a4a44929bcb187ae2ffcf_899ee11ef1114c57b8a64d2427f89c19'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_cab10e4ab7e44c44b2139388af2e62c0'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_3520bc9d746142efa160825231d4005a_812402c214164a0995b6958a9607baae'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_4bdb915983d94c02b7676e769b1b210e'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_e8cdceb757d24395bb454dfe1277cd54_7de39032fa324b10a2d7792dc49a6de7'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_fcf6870a47b34a1cb98626e101a5c5c0'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_714a0ab0f12449c28e0dcc1545bdf01e_e47896893bf34f5aa4af2d3752b392eb'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_898cef51b76943e089d928e8912eac7e'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_6324e6c1bbb749129696dfbe7613ae21_fe3fdbec021e45e5b2321a8645ec3bbf'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_beed65b21d344a049e6a9443f546eafe'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_42c6aa2df3d34b119d81006125ffd6e2_4ad0037a007a4b43a116854238d21ba8'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_47df94895ef541d4aa5eee496b167f71'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_ab240c353849436886743be88272d976_33aed17c061d43e4b1af627c29eebe0b'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_430fc08795db47469da5b12a5e8a7ef0'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_4f97505c57924fa8a302cb3f0fa13c6f_cbcac78c46974b3fb3b96822307c76db'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_b9512a2a390645aba675f352356650b1'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_e791585afc254261a3bfc5de4aa4992c_0771a58123dc44a4808e3cd54e7431a5'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_3081f2d7b43e407584745428d5912bbc'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_dadd7005a6ac4a7f9074b0698138aa5f_1045abc4fce24171b40fded788d0dbf5'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_40da2e0bcb0c43a2ae2335f3db614e53'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_eb320bc76e194939862340c76f38603d_38a4c382c05c4714b8af40f435234e5a'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_0c480ebdd9d14c578f07f696a04db757'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_fdd3328eef1d4274a78c6f0feaf73ec2_000df7f973524ac4af681a920a53829a'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_a12455ee47de4d779fc6eed9faefcb68'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_869309e85bc646c7a7015ecd41128e50_ceca5e4965614de788b9851a8ae621a9'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_e39c6d877f074a18b894bd129464ecfc'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_475fb393e405418fb51064921ef9fa1b_611b4a57ad7d48a7b336711ca2f47e4e'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_c050b688e9134b2da3504465e31c5e3f'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_b4f7dca03c734ec0b1cdeaafa4e3be59_0be6c2b1e16b4d599ffa1b2909224393'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_3a189fd4d19d4527857ed0a2bbefa004'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_0a5a335e144848b1aa6c7dcf7bf7882b_c0f35434ceb24a878c29904af1da2001'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_b63a11c281ce469d8553f3760fc08de3'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_cbe4c00fbf2c45bfa625705500d07a2c_b138199336ed44e4953881a27bbd7074'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_cd17394a9dc34583914829bf97f0b58f'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_31b4ea620dce45a2a481f69c7b78b293_214d28f3ae70444daba9e2f992dc5064'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_0351677654a34d078c011aa9876411af'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_90f4338124db45fe9b32e1b0624edfb1_c93539d3f4e34ddea1304f8d72e511e1'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_784a7384a79242c3a9edacf2e5d4b7fa'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_0b571c4c7800412fb0ab70dd6e5dbcd5_5b731dc6e5b64e089bf0f0eb6b993406'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_cf2e1a19f5cd463db406b41a325fddd4'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_b78916bbbe214af4bcd3bdc916dbe92a_d71178f3ea2d44d393bdc21c68fe02d5'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_a705fa2e9485420a8b78d5f6d6744e6a'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_0ec801bff61c46e5a058594778d86d60_5b66a5213663441e84c5bf52cae82786'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_f2b39167156a4c6894d1a6d7c4abc8d7'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_fa4fe5ad979443d98a60c55811272119_668f0d41b3aa436aa4ffdca2e59ca053'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_a419b665ece84d4dada5f4d5fd3f9d4d'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_f97528b4e2c441d1b8d7ecf376c1cd3a_69da212b713d49379c0fae949dc22900'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_7520314cd1c74cb697344d9818f268a8'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_e02093ca9c1b476598a23b75a7188511_c33143bb646e4145b37b1efcd0a3f6a4'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_5152638f393343309910e87faf648ec6'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_13c0bb67a0dd4f6fa567e4b2c2e2cc5b_9affb8b119594ba3b98c78288b3ab050'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_e66dcf87132742ce9d74bc16e44ead22'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_6bc5ae3e14254ec0b57667c458278bc5_693799a507374842b98c24cf7f67b7c0'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_8a483df902504c618277f098faede93c'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_5ccd3f8fa2654e80a2f1edb1d401b877_c5225b81c0264f37ab28446e64a06871'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_f2df4b58040040a7adc08079daf4340d'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_f8678589c9e046c790645801004800ce_ab86da631caf4f70acff8ec7b22adb6b'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_285e61d03a6e4d46a63e75b3561ddbfd'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_dbfb55d2460c458a8a14b4b7fddda2da_070e6fb707ae4119a961ad4baaf122d1'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_9cb2b873829a41ff838e9b013166ee1b'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_e7bc38ce04d442b18b80c3922137a257_ac6679e6d61b4c2cb125cd4999a87725'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_ad56983658194196a43308247c0d4a9c'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_812185954ccd434fad972d5af9ad9b48_145782a23b774c5c8b8c4fd4cc563ba9'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_f07a1fe6e92747119a00fc3cb00e848f'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_438c0fdba2584547a22a9fa98c6b9b15_41c7feb3c22b4350b8c2759413da6ed5'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_0f5e2ae4374a4c71aad2d05a14d52b40'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_fb6f685c5900411fb21740807d58320c_af936f2311344dcc9884ae3c06ed705c'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_567aa432b57c4c859e83376c782d5421'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_8ac831b76f39468185e69dceeb0de843_420540c761a24931bca83b08d60d3be2'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_c8885ce30be04b358ee8ecdb33c21543'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_09fb00302d3b4a37b6e5e70ae551723e_d71fb98669b34256af7d581054b672a3'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_04576ab54b524d4ab0af9a6e0f6c7437'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_f05019da87cb497fa2a1c938c1b31c07_7c404619d71f46ecad1244e3465adf94'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_b94222f6a27d40e19474cace5f0723fb'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d34461a922a544449e42c32f2fb0893b_3d3234db31be4658bcbbe0490b6a9cd7'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_1b7c55eae51a4d3f91ced69fcf44803a'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_b8ab8f5814564e07b8783efc76732a81_303508a0f9964aa880aa08a3471484ea'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_baf9f88ba2a3491ca041af5a453f5238'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_547b70b5859342fea71aa5d710460e88_12c2e482eea146699c5f580350546a46'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_4bb19a24f425419ba40c6cdcd9693491'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_c307a550ee7840d1a8b0a44d60cd4cad_54e913a37d5d415bb41ff712ec3096d5'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_17bcfbfabdc949ab9fd8d8f65e98ec64'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_e0b7446b42d24bdfb5d011eb0a985c64_d5a0834399cb45ad88250465e9158b44'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_1f12f16d397e46a88023e54bcc8fbdc4'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_c0d31466e50847d69fa9121b70e2b954_cc5aa71c90c84bfa8e56011c279f51df'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_ff9656da660d4ecab450069138c94890'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_42205b5b33ef41a7be525fa4cfaa1523_235c911b3da3488c9c4362a733787c06'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_6eef2bd312a34b9b82dcfbb424d1b4e7'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_7335868e31a0404ab13aa2f649811437_0a4610f9f5264eebab6e04d721a88726'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_1b1a79fbd7ca4233b5f639cdf68d05f9'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_7b14230beb9246589a74555b4b4620df_e1caebe4c517445fa73a6c45944acf80'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_55725db3c8854f43ad32c2fb9a7a56d0'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_426b6a58d548400785a80c5aee51c07e_2f9d9e8a69214b258702d25d516ba6f6'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_d9230ac2d4cf497583c4010dd0198d08'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_674ff43c32a84e5d9b24301e8e7a5386_2a0210e118454330b0fff0e8ad84e23d'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_b82fd7365e7c4744ad03b3044b45db98'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_a281f15664c1484aa17728663411edb1_1998f2b633c84d91a576c04d2e3e1561'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_a278cbf7df6e4d6fb04a6054b78b8a39'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_f708324cd6324a2ebb6449d427c60a8d_e6ab0fe22e4c47b39f667cd895ac93f1'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_842f275d67294174875e5dd592c67ea3'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_4423ba37e80a49e3ab6b1703b0a02a38_412eaa4e38374673beaaaf1e34abdba3'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_bfd2808e3b0846919dce5cd133269169'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_84faee911a2b4f259316bf19ed8b0e98_bd5eb982775048cd8e05357e7e644997'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_50ca48472a854c6f87b8d43e3d4a198a'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_b6efef4a02314c8188bcccb0469a41ab_b8300f6b760a4b0eb3985212b331f939'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_3afe24e3aac7484a995b977897bfdd2f'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_4f16e74a36274b22aa079c716cb1c24f_f67f23198a0c49c2ac1fac24e8ce7d90'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_96fc9d533de34050b8bfe925bd70caa9'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_e44b177c5b8c45608de0f9b6772bd477_3e029641edb94fc88217ac523a4dbfe6'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_ec160aa68e424e70995c386f21a209b7'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_3703bf601dd1422e9921fc38b2ecd0c9_33db0ea447844503af55b03b21500cb0'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_01aa7d1e356047b685da08dfe6df46be'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_9640d66b1a87466880d0a9ffb29a43e8_3f477027b96d4789a5785afc9e5c7a9d'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_5bebaf21213441b89c588b8a9045a8d4'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_1214e8e39fd64b18bfbe54d465c7afcd_e9a69c3dc64f4ed8be685129404653fc'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_275aac9ab9db4743a560fd742dc38594'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_6b5afb89dde3465ab2582c53558747a9_9fdf9b557dad404884d906b64387a6eb'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_1ff426729aac45cf9b49cbb14e5df64c'[0m
+Traceback (most recent call last):
+  File [35m"D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py"[0m, line [35m386[0m, in [35mmain[0m
+    del [31mcache[rtype][0m[1;31m[name][0m
+        [31m~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[1;35mKeyError[0m: [35m'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_10696_d4812e9019aa4e13bcff8e18bc841914_5da95ceb6e584aa49ef31af40c3f8a94'[0m
+exit=0

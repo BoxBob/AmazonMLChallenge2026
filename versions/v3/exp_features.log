@@ -1,0 +1,37 @@
+[    33s]   val: new features 2,000,010/3,000,000
+[    49s]   val: new features 3,000,000/3,000,000
+[    78s]   train: new features 2,000,010/12,000,000
+[   105s]   train: new features 4,000,020/12,000,000
+[   133s]   train: new features 6,000,030/12,000,000
+[   157s]   train: new features 8,000,040/12,000,000
+[   183s]   train: new features 10,000,050/12,000,000
+[   214s]   train: new features 12,000,000/12,000,000
+[   346s] fold 0 best iteration 901
+[   481s] fold 1 best iteration 1050
+[   727s] m1 best iteration 1191
+hn_lev                   49.5
+hn_contains             247.8
+hn_gap                   18.1
+num_shared               16.4
+num_only_c              106.0
+num_only_q              413.5
+num_min_lev              87.2
+street_tset              10.8
+name_num_diff            43.6
+cs_addr_rare_overlap     87.9
+cs_addr_unique_c        275.7
+cs_name_rare_overlap     29.0
+cs_name_unique_c         78.9
+cs_disc_match             8.8
+[   987s] m2 best iteration 490
+xs_name      5.5
+xs_addr      6.4
+xs_hn_eq    10.5
+ss_name      6.3
+ss_addr     10.2
+ss_hn_eq    22.6
+v2 p1    t=0.750  A=0.9708  B=0.9708  all=0.9708
+v2 p2    t=0.700  A=0.9718  B=0.9722  all=0.9721
+exp p1   t=0.750  A=0.9748  B=0.9751  all=0.9750
+exp p2   t=0.700  A=0.9774  B=0.9778  all=0.9776
+exit=0

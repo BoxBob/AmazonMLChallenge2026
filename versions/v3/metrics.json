@@ -1,0 +1,19 @@
+{
+  "val_macro_f05": 0.9811,
+  "holdout_B_macro_f05": 0.9813,
+  "threshold": 0.725,
+  "model": "blend(GBDT group-context, cross-encoder)",
+  "val_candidate_recall": 0.9757,
+  "val_stage1_recall": 0.9801,
+  "val_oracle_f05": 0.9923,
+  "cands_per_s1": 40.0,
+  "val_india": 0.9774,
+  "val_us": 0.9836,
+  "val_singleton": 0.988,
+  "val_1match": 0.9348,
+  "test_matches": 5622610,
+  "test_s1_with_match": 1619263,
+  "validator": "PASS (--check-ids)",
+  "note": "notebook code/src/v3.ipynb; experiment logs exp_features.log (T08/T09), exp_ce.log (T10)",
+  "archived_at": "2026-09-26T06:12:16"
+}
