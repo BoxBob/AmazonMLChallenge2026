@@ -17,7 +17,9 @@ STOP = {"r", "rue", "st", "ave", "blvd", "all", "imp", "rte", "ch", "des", "les"
 
 te = pq.read_table(SH + r"\test_records.parquet", columns=["entity_id", "country", "core", "hn", "addr"]).to_pandas()
 te = te.set_index("entity_id")
-v4 = pd.read_csv(OUT + r"\matching_results_v4.tsv", sep="\t", dtype=str, keep_default_na=False, quoting=csv.QUOTE_NONE)
+BASE = sys.argv[2] if len(sys.argv) > 2 else OUT + r"\matching_results_v4.tsv"   # file to filter
+DEST = sys.argv[3] if len(sys.argv) > 3 else None                                 # output path
+v4 = pd.read_csv(BASE, sep="\t", dtype=str, keep_default_na=False, quoting=csv.QUOTE_NONE)
 fr = v4[v4.source1_entity_id.map(te.country) == "France"]
 m = fr.assign(c=fr.matched_entity_ids.str.split(",")).explode("c")
 m = m[m.c != ""]
@@ -75,6 +77,6 @@ kept = m[~m.swap].groupby("source1_entity_id").c.agg(",".join)
 out = v4.copy()
 isfr = out.source1_entity_id.map(te.country) == "France"
 out.loc[isfr, "matched_entity_ids"] = out.loc[isfr, "source1_entity_id"].map(kept).fillna("").to_numpy()
-path = OUT + rf"\lb_probe\matching_results_fr_noswap_f{MIN_FREQ}.tsv"
+path = DEST or OUT + rf"\lb_probe\matching_results_fr_noswap_f{MIN_FREQ}.tsv"
 out.to_csv(path, sep="\t", index=False, quoting=csv.QUOTE_NONE)
 print(f"wrote {path}; rows identical to v4 {(out.matched_entity_ids == v4.matched_entity_ids).mean():.4f}")

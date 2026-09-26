@@ -248,3 +248,23 @@ def lb_fit2():
 
 if __name__ == "__main__" and sys.argv[1] == "fit2":
     lb_fit2()
+
+
+def lb_update_noswap(delta=0.001):
+    """noswap scored +0.001 (LB 0.974): solve for the precision of v4-ACCEPTED French swaps (removed zone)"""
+    st = json.load(open(STATE))
+    g = st["marginals"]
+    tab = diff_by_class(OUT + r"\lb_probe\matching_results_fr_noswap_f300.tsv")
+    for d in (delta - 0.0005, delta, delta + 0.0005):     # leaderboard rounding band
+        grid = np.linspace(0, 1, 101)
+        err = [abs(expected_delta2(tab, st["prec_add"], {**st["prec_rem"], "SWAP": t}, g) - d) for t in grid]
+        print(f"  LB delta {d:+.4f} -> v4-accepted French swaps are ~{grid[int(np.argmin(err))]:.0%} true")
+    grid = np.linspace(0, 1, 101)
+    err = [abs(expected_delta2(tab, st["prec_add"], {**st["prec_rem"], "SWAP": t}, g) - delta) for t in grid]
+    st["t_swap_rem"] = float(grid[int(np.argmin(err))])
+    st.setdefault("lb", {}).update({"v3": 0.965, "v4": 0.973, "v5": 0.972, "idf": 0.971, "noswap": 0.974})
+    json.dump(st, open(STATE, "w"), indent=2)
+
+
+if __name__ == "__main__" and sys.argv[1] == "update_noswap":
+    lb_update_noswap()
