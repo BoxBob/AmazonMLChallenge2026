@@ -1,0 +1,43 @@
+{
+  "val_macro_f05": 0.9826,
+  "note_val": "US/India predictions identical to v4; France re-scored after self-training",
+  "self_training": {
+    "rounds": 2,
+    "confident_share": [
+      0.966,
+      0.977
+    ],
+    "pseudo_pos": [
+      780693,
+      824226
+    ],
+    "france_pairs_above_threshold": [
+      861694,
+      877133,
+      891765
+    ],
+    "decision_flips": [
+      31031,
+      19982
+    ]
+  },
+  "france_matches": {
+    "v4": 830913,
+    "v5": 848883
+  },
+  "france_s1_with_match": {
+    "v4": 243453,
+    "v5": 244427
+  },
+  "test_matches": 5751216,
+  "test_s1_with_match": 1630297,
+  "silver_acceptance_test": {
+    "France": 0.9829,
+    "India": 0.9209,
+    "US": 0.9936
+  },
+  "validator": "PASS (--check-ids)",
+  "candidates": "identical to v4 (versions/v4/candidate_pairs_v4.tsv)",
+  "archived_at": "2026-09-26T12:40:09",
+  "note": "notebook code/src/v5.ipynb; run_attempt1.log = startup failure P18"
+}
