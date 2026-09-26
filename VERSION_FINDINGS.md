@@ -14,6 +14,7 @@ way: F0.5 is computed per S1 entity, singletons included, and then averaged.
 | v2 — improved | `code/src/improved.ipynb` | **0.9721** | 97.0% | 0.9906 | 30.0 |
 | v3 — towards SOTA | `code/src/v3.ipynb` | **0.9811** (hold-out half B: 0.9813); **leaderboard 0.965** | 97.6% | 0.9923 | 40.0 |
 | v4 — France blocking fix + ambiguity | `code/src/v4.ipynb` | **0.9826** (hold-out 0.9826); France silver 0.952 → **0.981**, France empty 9.7% → **6.2%**; **leaderboard 0.973** (+0.008 over v3) | 97.7% | 0.9928 | 40.0 |
+| v5 — France self-training | `code/src/v5.ipynb` | 0.9826 (US/India = v4); France matches 830,913 → **848,883**, France silver 0.981 → **0.983**, France empty 6.2% → **5.8%** | 97.7% | 0.9928 | 40.0 |
 
 \* The score a perfect classifier would get on that version's candidate set. It is the ceiling
 that blocking allows.
@@ -46,6 +47,7 @@ Each row: the first-principles reason for the change, what we did, what it measu
 | T11 | v3 full run | combine T07–T10 | `code/src/v3.ipynb` | **0.9811** (hold-out B 0.9813); **hidden test 0.965** | submitted | `v3` |
 | T12 | S1-side ambiguity (E1) | A name shared by many *S1 entities* is weak evidence; only 50.8% of S1 names are unique in their country | 7 S1/pool name and address count features | blend 0.9811 → **0.9822** | adopted | `v4` |
 | T13 | Gap diagnosis | You can't fix a gap you haven't located; compare test with validation using label-free statistics | per-country prediction stats, distractor fingerprints, silver labels | France blocking failure found (P14) | → T14 | `v4` |
+| T16 | France self-training (v5) | Apply T15's winner to the real unlabelled country: the v4 stack labels its own confident French pairs, and the stage-1 matcher relearns French patterns | 2 rounds, confidence ≥0.97 / ≤0.03 (96.6% → 97.7% of French pairs), 25% of negatives, 60% of training rows | France pairs above threshold 861,694 → 877,133 → 891,765 (flips 31k → 20k, converging); France empty share 6.2% → 5.8%, matching US 5.8% / India 6.0% | adopted; **leaderboard pending** | `v5` |
 | T15 | Domain adaptation, leave-one-country-out (DADER protocol) | France is an *unlabelled target domain*. Simulate it: train on the US, adapt to India without its labels, score on India | M0 source only / M1 self-training / M2 Saerens EM prior / M3 per-country quantile alignment / UB India-trained | M0 0.9293 · **M1 0.9390** · M2 0.9293 · M3 0.8848 · UB 0.9681 → an unseen country costs **~0.039**; only self-training transfers (closes 25%, pseudo-labels 99.7% correct) | self-training adopted for France (v5) | `v5` |
 | T14 | Language-independent keys | What identifies a business is the *whole* name at a *number*, not the first word of the name | `ex_name_hn`, `ex_hn_street` + silver report | validation +0.15% recall (nothing to gain there); **test France: +0.65 new name+number pairs per S1** | adopted | `v4` |
 
