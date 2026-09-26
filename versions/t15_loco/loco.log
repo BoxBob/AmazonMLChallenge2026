@@ -1,0 +1,15 @@
+[    30s] source pairs 3,200,000  target pairs 3,200,000  val US 2,406,720  val India 1,593,280
+[   289s] M0 done: (np.float64(0.7500000000000004), np.float64(0.929309784459317), np.float64(0.929309784459317))
+[   301s]   self-training round 1: pseudo-labelled 96.6% of target pairs, pseudo-label accuracy 0.9977 (hidden labels, diagnostic only)
+[   750s]   self-training round 2: pseudo-labelled 98.2% of target pairs, pseudo-label accuracy 0.9967 (hidden labels, diagnostic only)
+[  1288s] M1 done: (np.float64(0.7500000000000004), np.float64(0.9389561097509004), np.float64(0.9396727737239))
+[  1355s] M2 done: source prior 0.0849, estimated target prior 0.0839 (true 0.0836); (np.float64(0.7500000000000004), np.float64(0.9293148181838751), np.float64(0.9293148181838751))
+[  1802s] M3 done: (np.float64(0.7500000000000004), np.float64(0.8848329306805296), np.float64(0.8848329306805296))
+
+method                     | threshold from source | India F0.5 at that threshold | India F0.5 at best threshold (oracle)
+M0 source only             |                 0.750 |                       0.9293 | 0.9293
+M1 self-training           |                 0.750 |                       0.9390 | 0.9397
+M2 EM prior correction     |                 0.750 |                       0.9293 | 0.9293
+M3 quantile alignment      |                 0.750 |                       0.8848 | 0.8848
+UB target oracle           |                       |                              | 0.9681
+exit=0

@@ -42,7 +42,11 @@ Each row: the first-principles reason for the change, what we did, what it measu
 | T08 | Numeric + candidate-set features | Numbers mean *identity*, not *similarity*: 1315 ≠ 1336, but 1604 ≈ 604 is a dropped digit | 9 numeric + 5 rarity features | stage-1 0.9708 → 0.9750 | adopted | `v3` |
 | T09 | Cross-source consistency | In a correct cluster, the S2 and S3 matches agree with each other | 6 cross-source group features | group 0.9721 → 0.9776 | adopted | `v3` |
 | T10 | Cross-encoder blend | A model that *reads* both records catches what hand-made features can't | Ditto-style MiniLM, blended on the uncertain band | 0.9776 → **0.9810** | adopted | `v3` |
-| T11 | v3 full run | combine T07–T10 | `code/src/v3.ipynb` | **0.9811** (hold-out B 0.9813) | current best | `v3` |
+| T11 | v3 full run | combine T07–T10 | `code/src/v3.ipynb` | **0.9811** (hold-out B 0.9813); **hidden test 0.965** | submitted | `v3` |
+| T12 | S1-side ambiguity (E1) | A name shared by many *S1 entities* is weak evidence; only 50.8% of S1 names are unique in their country | 7 S1/pool name and address count features | blend 0.9811 → **0.9822** | adopted | `v4` |
+| T13 | Gap diagnosis | You can't fix a gap you haven't located; compare test with validation using label-free statistics | per-country prediction stats, distractor fingerprints, silver labels | France blocking failure found (P14) | → T14 | `v4` |
+| T15 | Domain adaptation, leave-one-country-out (DADER protocol) | France is an *unlabelled target domain*. Simulate it: train on the US, adapt to India without its labels, score on India | M0 source only / M1 self-training / M2 Saerens EM prior / M3 per-country quantile alignment / UB India-trained | M0 0.9293 · **M1 0.9390** · M2 0.9293 · M3 0.8848 · UB 0.9681 → an unseen country costs **~0.039**; only self-training transfers (closes 25%, pseudo-labels 99.7% correct) | self-training adopted for France (v5) | `v5` |
+| T14 | Language-independent keys | What identifies a business is the *whole* name at a *number*, not the first word of the name | `ex_name_hn`, `ex_hn_street` + silver report | validation +0.15% recall (nothing to gain there); **test France: +0.65 new name+number pairs per S1** | adopted | `v4` |
 
 ## Pitfall ledger
 
@@ -63,6 +67,9 @@ and the fix or patch.
 | P10 | Decision theory didn't help | DTA +0.0001 | DTA assumes independent candidates, but siblings are correlated near-copies; the stacked group model already learned the per-entity decision | kept the tuned global threshold | closed (negative result) |
 | P11 | Name-only pairs remain ambiguous | recovered blank-address pairs barely change the score | With no address, a common name is weak evidence, and blank-address same-name *distractors* also exist | next: signals that separate a real blank-address match from a same-name distractor | **open** |
 | P12 | Analysis bug from int32 overflow | FP count 328,005 instead of 2,659 | `q * N` with int32 `q` overflows past 2³¹ | cast to int64 before building keys | fixed; rule: build keys in int64 |
+| P14 | **Validation 0.981, hidden test 0.965: France blocking failure** | `Roubaix Gestion SARL, 53 Rue de Cartigny` ↔ `Roubaix Gestion SARL, 53 R. DE CARTIGNY, ROUBAIX, Nord` never became a candidate, so the S1 entity got 0 matches | French names are templated `{City} {Word} {LegalForm}`. Every key assumed the *first token* is distinctive: `roubaix\|53` overflows the block cap, `53 r` (r = rue) matches thousands, and the name kNN is swamped by ~57 same-name records per S1. **85% of the missed French same-name-same-number pairs were never candidates.** US/India first tokens *are* distinctive, so validation couldn't see it | keys on the *full* name + number and on number + first *distinctive* street word (T14); silver report per country | **fix in v4, verify on leaderboard** |
+| P15 | Validation blind to unlabelled countries and to shifts in distractor density | test: France 15% of S1, no labels; test pools have 41% distractors vs 26% in train (two independent fingerprints agree: India 0.41/0.41, US 0.43/0.41), with true matches per S1 unchanged (~3.4) | A validation split drawn from the training distribution only measures that distribution | label-free monitors: per-country prediction stats and **silver-label acceptance** (validation: true silver pairs are accepted 99.7–100%; test US 0.988 and India 0.741 match validation, so those countries transfer; France was the outlier) | monitor adopted |
+| P16 | A model trained on one country degrades on an unseen one, even with correct blocking | US-trained stage-1 on India: 0.9293 vs 0.9681 India-trained, on the same candidate pairs | *Feature shift*, not prior shift: the positive rate among candidates is nearly identical (US 0.0849, India 0.0836), but what similarity patterns *mean* differs (native scripts, shared names, address styles). Quantile alignment fails because similarity values carry absolute meaning (100 = identical everywhere) | self-training on confident target pseudo-labels (T15), which learns the new country's patterns from its easy pairs | adopted for France in v5 |
 | P13 | Bash heredoc quoting broke a background job | `unexpected EOF while looking for matching '` | nested quotes in a shell heredoc | write scripts with the editor, run them as files | fixed |
 
 ---
@@ -368,3 +375,63 @@ about them because blank-address, same-name *distractors* also exist. The ceilin
 0.9923), but turning it into score needs a better signal for name-only pairs.
 
 *Test inference and the final v3 error analysis are appended below.*
+
+---
+
+## v4 — why the hidden test scored 0.965 when validation said 0.981
+
+**Symptom:** v3 scored 0.9811 on validation (0.9813 on the hold-out half) but **0.965 on the hidden test**, a gap of 0.016.
+
+**First-principles framing:** the gap has to come from a difference between the validation distribution and the test
+distribution. So we listed every structural difference and measured each one *without test labels*.
+
+**Step 1: structure per country.**
+
+| Split / country | S1 entities | Pool records per S1 | Predicted matches per S1 (v3) | Predicted empty |
+|---|---|---|---|---|
+| train India | 883k | 4.68 | (true 3.46) | (true singletons 5.6%) |
+| train US | 1.32M | 4.67 | (true 3.46) | (true 5.6%) |
+| test India | 810k | 5.82 | 3.26 | 6.1% |
+| test US | 663k | 5.76 | 3.36 | 5.9% |
+| **test France** | 259k | 5.53 | **2.90** | **9.7%** |
+
+**Step 2: what the extra test records are.** On train, true matches share an exact name with an S1 entity 64%/56%
+of the time (India/US), and distractors only 21%/25%. Name + house number gives 47%/42% vs 5%/3%. Using both fingerprints,
+the test pools of India and the US are **41% distractors (train: 26%) with ~3.4 true matches per S1, unchanged**. The
+extra distractors are *not* same-name-same-number twins (1.78 vs 1.76 twins per S1), so they're mostly unrelated
+records and easy to reject.
+
+**Step 3: silver labels.** Silver pair = a pool record with the same country, name and house number as the S1 entity.
+
+| | Silver precision | v3 accepts |
+|---|---|---|
+| validation India | 0.760 | 0.759 (accepts 99.7% of the *true* ones) |
+| validation US | 0.980 | 0.981 (accepts 100% of the true ones) |
+| test India | – | 0.741 → consistent with validation |
+| test US | – | 0.988 → consistent with validation |
+| **test France** | – | 0.716; for silver keys **unique among French S1**: 0.952 |
+
+The US and India transfer. France is the outlier: **24k French silver pairs with a unique name+number** were missed,
+and 85% of them were **never candidates**.
+
+**Step 4: look at the failures.**
+```
+S1 Roubaix Gestion SARL | 53 Rue de Cartigny, Roubaix, Hauts-de-France
+S2 Roubaix Gestion SARL | 53 R. DE CARTIGNY, ROUBAIX, Nord                  -> S1 got 0 matches
+S1 Roubaix Parents SASU | 28 Rue Ternaux, Roubaix, Hauts-de-France
+S2 Roubaix Parents SASU | 28 RUE TERNAUX, ROUBAIX, Nord                     -> not a candidate
+S1 Lille Club SARL      | 86 Rue de Lannoy, Lille        vs  Lille Club S.C.I. | #86 R DE CANTELEU  -> correctly rejected
+```
+French names are **templated from a small vocabulary**: city + word + legal form. The distinguishing information is
+the **legal form and the street**, not the name's first word. Every blocking key had silently assumed a distinctive
+first token.
+
+**Step 5: the fix and its evidence.** Language-independent keys (`ex_name_hn`, `ex_hn_street`) add only +0.15% true
+pairs on validation, *because the problem doesn't exist there*, but **+0.65 new name+number pairs per French S1** on
+test (US: +0.001). Expected effect: France recall up. The leaderboard is the only labelled check for France, so the v4
+notebook prints a **silver report**: the share of unique name+number pairs predicted, per country. France should move
+from 0.952 towards the ~0.99 seen in labelled countries.
+
+**Lesson:** a validation score only certifies the distribution it was drawn from. When the test contains a population
+we can't label, every run needs **label-free monitors** (prediction statistics, fingerprints, silver labels), and the
+design must avoid **language-specific assumptions** (here: "the first name token is distinctive").
