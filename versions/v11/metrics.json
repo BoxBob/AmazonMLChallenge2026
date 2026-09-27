@@ -7,7 +7,8 @@
     "France_v11": 0.9793
   },
   "usin_rows_changed_vs_v10": 0.0285,
-  "leaderboard": null,
+  "leaderboard": 0.977,
   "archived_at": "2026-09-27T19:43:38",
-  "note": "v11 data-rich multilingual CE, wide band 0.001-0.999, zone re-stacker; France rows from the 0.974 file (v11_frnew re-scores France)"
+  "note": "v11 data-rich multilingual CE, wide band 0.001-0.999, zone re-stacker; France rows from the 0.974 file (v11_frnew re-scores France)",
+  "leaderboard_frnew": 0.977
 }
