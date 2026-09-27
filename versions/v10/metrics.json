@@ -8,7 +8,7 @@
     "India": 0.9207,
     "France_v10": 0.9786
   },
-  "leaderboard": null,
+  "leaderboard": 0.975,
   "archived_at": "2026-09-27T11:17:48",
   "note": "prefilter top-80 + multilingual CE; France rows from the 0.974 file (v10_frnew re-scores France too)"
 }

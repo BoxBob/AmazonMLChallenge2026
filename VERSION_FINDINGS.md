@@ -14,9 +14,9 @@ way: F0.5 is computed per S1 entity, singletons included, and then averaged.
 | v2 — improved | `code/src/improved.ipynb` | **0.9721** | 97.0% | 0.9906 | 30.0 |
 | v3 — towards SOTA | `code/src/v3.ipynb` | **0.9811** (hold-out half B: 0.9813); **leaderboard 0.965** | 97.6% | 0.9923 | 40.0 |
 | v4 — France blocking fix + ambiguity | `code/src/v4.ipynb` | **0.9826** (hold-out 0.9826); France silver 0.952 → **0.981**, France empty 9.7% → **6.2%**; **leaderboard 0.973** (+0.008 over v3) | 97.7% | 0.9928 | 40.0 |
-| v6 — v4 + French descriptor-swap filter | `exp_v6_descswap.py` on v4 | US/India = v4 (0.9826); 21,148 French swap pairs removed; **leaderboard 0.974** (best) | 97.7% | 0.9928 | 40.0 |
+| v6 — v4 + French descriptor-swap filter | `exp_v6_descswap.py` on v4 | US/India = v4 (0.9826); 21,148 French swap pairs removed; **leaderboard 0.974** | 97.7% | 0.9928 | 40.0 |
 | v5 — France self-training | `code/src/v5.ipynb` | 0.9826 (US/India = v4); France matches 830,913 → 848,883, France silver 0.981 → 0.983; **leaderboard 0.972 (−0.001 vs v4) → rejected** | 97.7% | 0.9928 | 40.0 |
-| v10 — prefilter top-80 + multilingual cross-encoder | `code/src/v10_full.ipynb` | **0.9835** (hold-out 0.9836; v9 0.9828); test silver US 0.9936 / India 0.9207 (= v9); vs v9 on test: 2.5% of US/India rows differ as sets (+24k / −20k pairs); submission `matching_results_v10.tsv` = US/India v10 + France from the 0.974 file; leaderboard pending | 98.0% | 0.9939 | 80.0 |
+| v10 — prefilter top-80 + multilingual cross-encoder | `code/src/v10_full.ipynb` | **0.9835** (hold-out 0.9836; v9 0.9828); test silver US 0.9936 / India 0.9207 (= v9); vs v9 on test: 2.5% of US/India rows differ as sets (+24k / −20k pairs); submission `matching_results_v10.tsv` = US/India v10 + France from the 0.974 file; **leaderboard 0.975 (+0.001, new best)**; France re-scored probe `_v10_frnew.tsv` pending | 98.0% | 0.9939 | 80.0 |
 
 \* The score a perfect classifier would get on that version's candidate set. It is the ceiling
 that blocking allows.
