@@ -1,0 +1,18 @@
+{
+  "val_macro_f05": 0.9829,
+  "holdout_B": 0.9828,
+  "val_us": 0.985,
+  "val_india": 0.9797,
+  "val_1match": 0.9411,
+  "val_singleton": 0.9891,
+  "loss": {
+    "false_merges": 0.0024,
+    "rejected_true": 0.0075,
+    "blocking": 0.0072
+  },
+  "composition": "US/India rows from multilingual cross-encoder run (v9usin); France rows from the 0.974 file (v4 + swap filter)",
+  "validator": "PASS (--check-ids)",
+  "expected_lb": "0.974 (+~0.0003, below display resolution)",
+  "archived_at": "2026-09-27T06:03:34",
+  "note": "notebooks code/src/v9_usin_mce.ipynb (US/India) + France from output/lb_probe/matching_results_fr_noswap_f300.tsv"
+}
