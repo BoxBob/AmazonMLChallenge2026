@@ -519,3 +519,9 @@ Macro F0.5 per S1 entity, singletons included, on the fixed 100k validation enti
 
 Loss 0.0171 = false merges 0.0024 + rejected true pairs 0.0075 (mostly inherently ambiguous, T18) + **never generated
 by blocking 0.0072** → the largest *reducible* bucket is blocking (Sparkly: top-k size is the main recall lever).
+
+### Housekeeping (2026-09-27)
+With approval, deleted 27 GB of regenerable caches: all of `work/baseline` (v1 embeddings, records, candidates; the v1
+outputs are archived in `versions/v1_baseline`) and the large arrays in `work/v3` (training/validation pairs, feature
+stores, kNN caches). **Kept** `work/v3/ce_model` (the English cross-encoder used by v4/v6, the lineage of the 0.974
+submission) plus the small model/log files, so that pipeline stays reproducible. D: free space 106 GB → 133 GB.
