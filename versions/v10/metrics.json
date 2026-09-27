@@ -1,0 +1,14 @@
+{
+  "val_macro_f05": 0.9835,
+  "holdout_B": 0.9836,
+  "candidate_recall": 0.9801,
+  "ceiling": 0.9939,
+  "silver_test": {
+    "US": 0.9936,
+    "India": 0.9207,
+    "France_v10": 0.9786
+  },
+  "leaderboard": null,
+  "archived_at": "2026-09-27T11:17:48",
+  "note": "prefilter top-80 + multilingual CE; France rows from the 0.974 file (v10_frnew re-scores France too)"
+}
