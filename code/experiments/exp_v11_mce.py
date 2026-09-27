@@ -36,11 +36,14 @@ W9 = r"D:\AmazonMLChallenge2026\work\v9"
 W10 = r"D:\AmazonMLChallenge2026\work\v10m80"
 W11 = r"D:\AmazonMLChallenge2026\work\v11"
 os.makedirs(W11, exist_ok=True)
+TAG = os.environ.get("V11_TAG", "")          # "" = first recipe; "b" = no attribute deletion / no error duplicates
 OLD_DIR = W9 + r"\mce_model"
-NEW_DIR = W11 + r"\mce_model"
-CKPT_DIR = W11 + r"\mce_ckpt"
+NEW_DIR = W11 + rf"\mce_model{TAG}"
+CKPT_DIR = W11 + rf"\mce_ckpt{TAG}"
 TOPK, BATCH, LR, MAX_LEN, TARGET_PAIRS, CKPT_EVERY = 16, 64, 2e-5, 96, 3_500_000, 5000
-P_ADDR_DEL, P_TOK_DEL = 0.15, 0.05
+P_ADDR_DEL = float(os.environ.get("V11_ADDR_DEL", "0.15"))
+P_TOK_DEL = float(os.environ.get("V11_TOK_DEL", "0.05"))
+ERR_DUP = os.environ.get("V11_ERR_DUP", "1") == "1"
 T0 = time.time()
 
 
@@ -88,7 +91,7 @@ m2 = xgb.Booster(model_file=W4 + r"\m2.json")
 pr = lambda b, X: b.predict(xgb.DMatrix(X, feature_names=b.feature_names), iteration_range=(0, b.best_iteration + 1))
 
 # ---------------- 1. training set: 400k entities, top-16, hard negatives + sampled easy ones, GBDT errors x2
-sel_path = W11 + r"\train_sel.npz"
+sel_path = W11 + (r"\train_sel.npz" if ERR_DUP else r"\train_sel_nodup.npz")
 if os.path.exists(sel_path):
     z = np.load(sel_path)
     sq, sc, sy = z["q"], z["c"], z["y"]
@@ -103,7 +106,7 @@ else:
     easy = np.flatnonzero(top & (ty == 0) & (p1 < 0.001))
     n_easy = max(0, TARGET_PAIRS - pos.sum() - hard.sum())
     easy = np.random.default_rng(5).choice(easy, min(n_easy, len(easy)), replace=False)
-    err = np.flatnonzero(top & (np.abs(ty - p1) > 0.3))           # pairs the GBDT gets (nearly) wrong: over-sample
+    err = np.flatnonzero(top & (np.abs(ty - p1) > 0.3)) if ERR_DUP else np.array([], np.int64)  # GBDT errors x2
     idx = np.concatenate([np.flatnonzero(pos), np.flatnonzero(hard), easy, err])
     idx = np.random.default_rng(6).permutation(idx)
     log(f"training pairs: entities {len(np.unique(tq)):,} | top-{TOPK} positives {pos.sum():,}, hard negatives {hard.sum():,}, "
@@ -177,7 +180,7 @@ log(f"{'no cross-encoder':34s}: t={t:.3f} A={fa:.4f} B={fb:.4f} all={fall:.4f}")
 wide = np.flatnonzero((p2 >= 0.001) & (p2 <= 0.999))
 log(f"validation wide-band pairs {len(wide):,} (narrow {((p2 >= 0.01) & (p2 <= 0.99)).sum():,})")
 res = {}
-for name, d in (("v9 mce", OLD_DIR), ("v11 mce", NEW_DIR)):
+for name, d in (("v9 mce", OLD_DIR), (f"v11{TAG} mce", NEW_DIR)):
     cache = W11 + rf"\val_pce_{name.split()[0]}.npy"
     if os.path.exists(cache):
         pce = np.load(cache)
@@ -205,5 +208,5 @@ for name, d in (("v9 mce", OLD_DIR), ("v11 mce", NEW_DIR)):
         res[f"{name} band {lo}-{hi}"] = fb
         log(f"{name + f' band {lo}-{hi}':34s}: CE AUC {auc:.4f} | blend {lr.coef_.round(3).tolist()} | "
             f"t={t:.3f} A={fa:.4f} B={fb:.4f} all={fall:.4f}")
-json.dump(res, open(W11 + r"\mce_results.json", "w"), indent=1)
+json.dump(res, open(W11 + rf"\mce_results{TAG}.json", "w"), indent=1)
 log("done")
