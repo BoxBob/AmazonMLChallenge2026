@@ -28,8 +28,8 @@ with torch.no_grad():
         Pn = torch.from_numpy(np.ascontiguousarray(EN[pool])).cuda()
         Pa = torch.from_numpy(np.ascontiguousarray(EA[pool])).cuda()
         idx = grp.i.to_numpy()
-        for a in range(0, len(idx), 256):
-            ii = idx[a:a + 256]
+        for a in range(0, len(idx), 32):
+            ii = idx[a:a + 32]
             qn = torch.from_numpy(np.ascontiguousarray(EN[mq[ii]])).cuda()
             qa = torch.from_numpy(np.ascontiguousarray(EA[mq[ii]])).cuda()
             cn = torch.from_numpy(np.ascontiguousarray(EN[mc[ii]])).cuda()
