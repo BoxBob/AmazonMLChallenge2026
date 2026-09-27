@@ -1,0 +1,31 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+D:\AmazonMLChallenge2026\.venv\Lib\site-packages\huggingface_hub\file_download.py:149: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in D:\AmazonMLChallenge2026\work\hf\hub\models--cross-encoder--mmarco-mMiniLMv2-L12-H384-v1. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+D:\AmazonMLChallenge2026\.venv\Lib\site-packages\huggingface_hub\file_download.py:149: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in D:\AmazonMLChallenge2026\work\hf\hub. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights: 100%|██████████| 201/201 [00:00<00:00, 2545.73it/s]
+[transformers] The new embeddings will be initialized from a multivariate normal distribution that has old embeddings' mean and covariance. As described in this article: https://nlp.stanford.edu/~johnhew/vocab-expansion.html. To disable this, use `mean_resizing=False`
+[    75s] fine-tuning cross-encoder/mmarco-mMiniLMv2-L12-H384-v1: 118M params, 1,200,000 pairs
+D:\AmazonMLChallenge2026\code\experiments\exp_v9_mce.py:100: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  sched.step()
+[    76s]   step 0/18,750 loss 0.0634
+[   526s]   step 2,000/18,750 loss 0.0573
+[  1023s]   step 4,000/18,750 loss 0.0477
+[  1529s]   step 6,000/18,750 loss 0.0431
+[  2036s]   step 8,000/18,750 loss 0.0514
+[  2542s]   step 10,000/18,750 loss 0.0358
+[  3037s]   step 12,000/18,750 loss 0.0380
+[  3544s]   step 14,000/18,750 loss 0.0416
+[  4022s]   step 16,000/18,750 loss 0.0319
+[  4485s]   step 18,000/18,750 loss 0.0321
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.70it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.70it/s]
+[  4658s] fine-tuning done
+[  4723s] validation band pairs 126,558
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights: 100%|██████████| 201/201 [00:00<00:00, 2038.20it/s]
+[  4824s] english MiniLM (v3/v4)    : band AUC alone 0.9400 | blend weights [[0.7409999966621399, 0.39399999380111694]] | t=0.750 A=0.9825 B=0.9826 all=0.9825
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights: 100%|██████████| 201/201 [00:00<00:00, 2133.82it/s]
+[  4925s] multilingual mMiniLMv2    : band AUC alone 0.9481 | blend weights [[0.703000009059906, 0.39500001072883606]] | t=0.700 A=0.9829 B=0.9828 all=0.9829
+[  4940s] no cross-encoder          : t=0.675 A=0.9789 B=0.9791 all=0.9790
+exit=0
