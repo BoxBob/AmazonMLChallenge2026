@@ -23,7 +23,8 @@ import valscore as V
 
 BASE = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
 W12 = r"D:\AmazonMLChallenge2026\work\v12"
-MODEL_DIR = W12 + r"\bienc_model"
+TAG = os.environ.get("V12_TAG", "")   # "b": also exclude the GBDT training entities (for use as a feature)
+MODEL_DIR = W12 + r"\bienc_model" + TAG
 os.makedirs(W12, exist_ok=True)
 N_PAIRS, BATCH, LR, MAX_LEN, SCALE, KMAX = 1_200_000, 128, 5e-5, 48, 20.0, 100
 T0 = time.time()
@@ -62,7 +63,13 @@ gm = gm[gm.c != ""]
 GQ_all = ids.get_indexer(gm.source1_entity_id).astype(np.int64)
 GC_all = ids.get_indexer(gm.c).astype(np.int64)
 if not os.path.exists(MODEL_DIR + r"\config.json"):
-    keep = ~np.isin(GQ_all, V.VAL)
+    excl = V.VAL
+    if TAG == "b":                   # same split as the notebooks: TRAIN_Q = perm[:300k] + perm[400k:500k]
+        n1 = int((SRC == 1).sum())
+        perm = np.random.default_rng(42).permutation(n1)
+        assert np.isin(V.VAL, perm[300_000:400_000]).all()
+        excl = np.union1d(excl, np.concatenate([perm[:300_000], perm[400_000:500_000]]))
+    keep = ~np.isin(GQ_all, excl)
     d = pd.DataFrame({"q": GQ_all[keep], "c": GC_all[keep]}).sample(frac=1.0, random_state=11)
     d = d.drop_duplicates("q").head(N_PAIRS)
     tq, tc = d.q.to_numpy(), d.c.to_numpy()
@@ -95,6 +102,8 @@ if not os.path.exists(MODEL_DIR + r"\config.json"):
     del model, opt
     torch.cuda.empty_cache()
     log("bi-encoder fine-tuned")
+if os.environ.get("V12_TRAIN_ONLY") == "1":
+    raise SystemExit(0)
 
 # ---------------- 2. embed the S2/S3 corpus and the validation S1 (fp16 memmaps, resumable in 1M-record blocks)
 model = AutoModel.from_pretrained(MODEL_DIR).cuda().eval().half()
