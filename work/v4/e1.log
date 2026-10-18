@@ -1,0 +1,20 @@
+[    17s] S1 name counts: share of S1 entities with a unique name 50.8%
+[    34s] train (16000000, 75), val (4000000, 75)
+[   183s] fold 0 best iteration 753
+[   306s] fold 1 best iteration 680
+[   594s] m1 best iteration 993
+s1_name_cnt_q        12.3
+s1_name_cnt_c        91.2
+pool_name_cnt_q       7.0
+s1_addr_cnt_q       103.7
+s1_addr_cnt_c       188.5
+pool_addr_cnt_q       4.9
+name_unique_pair    270.4
+[   887s] m2 best iteration 330
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights: 100%|##########| 201/201 [00:00<00:00, 2368.32it/s]
+[  1075s] cross-encoder scored 143,184 band pairs
+v3 group model   t=0.675  A=0.9773  B=0.9780  all=0.9777
+E1 group model   t=0.725  A=0.9787  B=0.9791  all=0.9789
+v3 blend         t=0.725  A=0.9809  B=0.9813  all=0.9811
+E1 blend         t=0.700  A=0.9820  B=0.9824  all=0.9822
+exit=0

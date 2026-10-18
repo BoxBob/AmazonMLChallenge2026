@@ -1,0 +1,157 @@
+Input Notebook:  code/src/improved.ipynb
+Output Notebook: work/v2/improved_executed.ipynb
+Working directory: code/src
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+Executing notebook with kernel: python3
+Executing Cell 1---------------------------------------
+Ending Cell 1------------------------------------------
+Executing Cell 2---------------------------------------
+torch 2.11.0+cu128 | GPU: NVIDIA GeForce RTX 3050 6GB Laptop GPU | xgboost 3.4.1 | pandas 3.0.6
+
+Ending Cell 2------------------------------------------
+Executing Cell 3---------------------------------------
+Ending Cell 3------------------------------------------
+Executing Cell 4---------------------------------------
+Ending Cell 4------------------------------------------
+Executing Cell 5---------------------------------------
+Ending Cell 5------------------------------------------
+Executing Cell 6---------------------------------------
+[      2s] train S1 400,000 | val S1 100,000
+
+Ending Cell 6------------------------------------------
+Executing Cell 7---------------------------------------
+Ending Cell 7------------------------------------------
+Executing Cell 8---------------------------------------
+[     63s] lexicon: 1,509,902 true pairs with non-ASCII S2/S3 text
+
+[     93s] lexicon sizes: name 802, address 47
+
+{'elelpi': 'llp', 'eses': 'ss', 'phud': 'food', 'praivet': 'private', 'vemcrs': 'ventures', 'hotl': 'hotel', 'emtrpraijej': 'enterprises', 'investmemt': 'investment', 'svstik': 'swastik', 'solyusms': 'solutions', 'nyu': 'new', 'mam': 'maa', 'lojistiks': 'logistics', 'sn': 'sun', 'sophtveyr': 'software', 'phrst': 'first', 'sevn': 'seven', 'eksports': 'exports', 'pra': 'pvt', 'li': 'ltd', 'solyusns': 'solutions', 'marketimg': 'marketing', 'prajekts': 'projects', 'prodyusr': 'producer', 'sauth': 'south'}
+{'tmilnatu': 'tamil', 'uttr': 'pradesh', 'prdes': 'pradesh', 'hriyana': 'haryana', 'mharastr': 'maharashtra', 'krnatk': 'karnataka', 'gujrat': 'gujarat', 'pscimbng': 'bengal', 'kerlm': 'kerala', 'rajsthan': 'rajasthan', 'odisa': 'orissa', 'telmgan': 'telangana', 'mdhy': 'pradesh', 'pmjab': 'punjab', 'amdhrprdes': 'pradesh'}
+
+Ending Cell 8------------------------------------------
+Executing Cell 9---------------------------------------
+Ending Cell 9------------------------------------------
+Executing Cell 10--------------------------------------
+Future Producer Private Limited -> ('future producer pvt ltd', 'future producer', 'pvt ltd')
+\u0907\u0902\u091f\u0930\u0928\u0947\u0936\u0928\u0932 \u092c\u093e\u092c\u093e \u0938\u0930\u094d\u0935\u093f\u0938\u0947\u091c \u092a\u094d\u0930\u093e\u0907\u0935\u0947\u091f \u0932\u093f\u092e\u093f\u091f\u0947\u0921 -> ('international baba services pvt ltd', 'international baba service', 'pvt ltd')
+SCI Ptit Àmicale -> ('sci ptit amicale', 'ptit amicale', 'sci')
+maurewilliamscolombier.com -> ('maurewilliamscolombier', 'maurewilliamscolombier', '')
+('20 158 1 a r b nagar shamshabad rangareddy tg', '', '20', '', '20-158/1')
+('1260 jordan creek pkwy w des moines ia', '01260', '1260', '1260 jordan', '')
+
+Ending Cell 10-----------------------------------------
+Executing Cell 11--------------------------------------
+[    110s] train source1: 2,206,821 records normalized
+
+[    147s] train source2: 5,034,616 records normalized
+
+[    186s] train source3: 5,285,603 records normalized
+
+[    214s] train records: 12,527,040  countries=['US', 'India']  native names: 10.95%
+
+[    227s] test source1: 1,732,544 records normalized
+
+[    266s] test source2: 4,887,273 records normalized
+
+[    305s] test source3: 5,082,316 records normalized
+
+[    331s] test records: 11,702,133  countries=['US', 'France', 'India']  native names: 14.58%
+
+Ending Cell 11-----------------------------------------
+Executing Cell 12--------------------------------------
+Ending Cell 12-----------------------------------------
+Executing Cell 13--------------------------------------
+D:\AmazonMLChallenge2026\work\tmp\ipykernel_8652\1727838760.py:2: UserWarning: Sparse invariant checks are implicitly disabled. Memory errors (e.g. SEGFAULT) will occur when operating on a sparse tensor which violates the invariants, but checks incur performance overhead. To silence this warning, explicitly opt in or out. See `torch.sparse.check_sparse_tensor_invariants.__doc__` for guidance.  (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\Context.cpp:767.)
+  return torch.sparse_csr_tensor(torch.from_numpy(X.indptr.astype(np.int64)),
+D:\AmazonMLChallenge2026\work\tmp\ipykernel_8652\1727838760.py:2: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\SparseCsrTensorImpl.cpp:51.)
+  return torch.sparse_csr_tensor(torch.from_numpy(X.indptr.astype(np.int64)),
+
+[    344s] core: TF-IDF vocab 57,683, SVD top singular values [77.81737518310547, 48.70390701293945, 44.3477783203125]
+
+[    446s] train core embeddings written
+
+[    542s] test core embeddings written
+
+[    558s] addr: TF-IDF vocab 72,491, SVD top singular values [61.75939178466797, 51.063201904296875, 41.59693145751953]
+
+[    678s] train addr embeddings written
+
+[    800s] test addr embeddings written
+
+Ending Cell 13-----------------------------------------
+Executing Cell 14--------------------------------------
+Ending Cell 14-----------------------------------------
+Executing Cell 15--------------------------------------
+Ending Cell 15-----------------------------------------
+Executing Cell 16--------------------------------------
+Ending Cell 16-----------------------------------------
+Executing Cell 17--------------------------------------
+Ending Cell 17-----------------------------------------
+Executing Cell 18--------------------------------------
+[    824s] ground truth: 2,206,821 S1, 7,638,365 true pairs
+
+Ending Cell 18-----------------------------------------
+Executing Cell 19--------------------------------------
+Ending Cell 19-----------------------------------------
+Executing Cell 20--------------------------------------
+[   1374s]   train country=US: kNN done for 299,861 queries
+
+[   1621s]   train country=India: kNN done for 200,139 queries
+
+[   1630s]   exact key ex_squash: 1,841,739 pairs
+
+[   1632s]   exact key ex_pc_first: 69,546 pairs
+
+[   1637s]   exact key ex_first_hn: 2,382,435 pairs
+
+[   1643s]   exact key ex_first2: 3,323,910 pairs
+
+[   1644s]   exact key ex_cnum: 402,471 pairs
+
+[   1649s]   exact key ex_hn_next: 1,828,749 pairs
+
+[   1695s] VAL stage-1 blocking recall 4.1706 (baseline 0.8364), ~190 cands/S1 before prefilter
+
+D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py:444: UserWarning: resource_tracker: There appear to be 20 leaked folder objects to clean up at shutdown: {'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_8652_3d8518dfac8d4fb7bdf163570f167d46_c772ce0022f54bb99b038303893acf00': 1, 'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_8652_3d8518dfac8d4fb7bdf163570f167d46_0ebc92d550bb412c8de8a4d9642831b5': 1, 'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_8652_4c9daf482bcc49b58a2c689262072722_07c638cc6d044cc792ddc4bc1d0304ba': 1, 'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_8652_3d8518dfac8d4fb7bdf163570f167d46_75749653f77f4a9d98560693ff0f3fb6': 1, 'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_8652_2964d12727284a6c8c6f922265c56f7e_c9a0c481de904c7d8e81b8fc16fa1fc8': 1, 'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_8652_3d8518dfac8d4fb7bdf163570f167d46_c94dc5c61096413898b02942698fd9f5': 1, 'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_8652_a12fee67e81047ab8a72f8960e70aa9e_cd2f33cb0793478686ac0e97511e33d0': 1, 'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_8652_3d8518dfac8d4fb7bdf163570f167d46_c52b433be9bd4061826becf0cba3ec57': 1, 'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_8652_cae0140b1d914690bd3423162f492681_a35e5779a2b84e0d82282dca93d0ee28': 1, 'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_8652_3d8518dfac8d4fb7bdf163570f167d46_6a63f0d5c44141bf9427515afb0e055a': 1, 'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_8652_cb40f58b15914745b0d5cadd4b864076_5af4ed2c8c9c4c57a50eab91ebba9a8e': 1, 'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_8652_3d8518dfac8d4fb7bdf163570f167d46_a8d4a134c54f44afa1b4887691b3f879': 1, 'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_8652_d3d595364ca9459481741d99f56fb310_b45b97b1f2df4313b47fe0eaab7268b2': 1, 'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_8652_3d8518dfac8d4fb7bdf163570f167d46_ede839fbc39a468083cefec1e8e428d1': 1, 'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_8652_075fe4ace44a40dd8f7b8eac0e6c7bc1_04a18c9cd97b4b07867762ededc4e8ed': 1, 'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_8652_3d8518dfac8d4fb7bdf163570f167d46_9b73f7220f30495bbf0f7a752b5f9423': 1, 'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_8652_452b00745c4a4316a68f65ed3b0f7508_d7947565ea6441e78fbeb8741e1f16f1': 1, 'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_8652_3d8518dfac8d4fb7bdf163570f167d46_ac9fe23e9de34839b0fb5251dcc7e9cf': 1, 'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_8652_543cc391642a417daee3330e6b9a4d36_d6d8038f25b344259fa740151910e4de': 1, 'D:\\AmazonMLChallenge2026\\work\\tmp\\joblib_memmapping_folder_8652_3d8518dfac8d4fb7bdf163570f167d46_94f97316fa5e41c198611eef611a1771': 1}
+  warnings.warn(
+D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py:468: UserWarning: resource_tracker: D:\AmazonMLChallenge2026\work\tmp\joblib_memmapping_folder_8652_3d8518dfac8d4fb7bdf163570f167d46_c772ce0022f54bb99b038303893acf00: FileNotFoundError(2, 'The system cannot find the file specified')
+  warnings.warn('resource_tracker: %s: %r' % (name, e))
+D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py:468: UserWarning: resource_tracker: D:\AmazonMLChallenge2026\work\tmp\joblib_memmapping_folder_8652_3d8518dfac8d4fb7bdf163570f167d46_0ebc92d550bb412c8de8a4d9642831b5: FileNotFoundError(2, 'The system cannot find the file specified')
+  warnings.warn('resource_tracker: %s: %r' % (name, e))
+D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py:468: UserWarning: resource_tracker: D:\AmazonMLChallenge2026\work\tmp\joblib_memmapping_folder_8652_4c9daf482bcc49b58a2c689262072722_07c638cc6d044cc792ddc4bc1d0304ba: FileNotFoundError(2, 'The system cannot find the file specified')
+  warnings.warn('resource_tracker: %s: %r' % (name, e))
+D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py:468: UserWarning: resource_tracker: D:\AmazonMLChallenge2026\work\tmp\joblib_memmapping_folder_8652_3d8518dfac8d4fb7bdf163570f167d46_75749653f77f4a9d98560693ff0f3fb6: FileNotFoundError(2, 'The system cannot find the file specified')
+  warnings.warn('resource_tracker: %s: %r' % (name, e))
+D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py:468: UserWarning: resource_tracker: D:\AmazonMLChallenge2026\work\tmp\joblib_memmapping_folder_8652_2964d12727284a6c8c6f922265c56f7e_c9a0c481de904c7d8e81b8fc16fa1fc8: FileNotFoundError(2, 'The system cannot find the file specified')
+  warnings.warn('resource_tracker: %s: %r' % (name, e))
+D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py:468: UserWarning: resource_tracker: D:\AmazonMLChallenge2026\work\tmp\joblib_memmapping_folder_8652_3d8518dfac8d4fb7bdf163570f167d46_c94dc5c61096413898b02942698fd9f5: FileNotFoundError(2, 'The system cannot find the file specified')
+  warnings.warn('resource_tracker: %s: %r' % (name, e))
+D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py:468: UserWarning: resource_tracker: D:\AmazonMLChallenge2026\work\tmp\joblib_memmapping_folder_8652_a12fee67e81047ab8a72f8960e70aa9e_cd2f33cb0793478686ac0e97511e33d0: FileNotFoundError(2, 'The system cannot find the file specified')
+  warnings.warn('resource_tracker: %s: %r' % (name, e))
+D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py:468: UserWarning: resource_tracker: D:\AmazonMLChallenge2026\work\tmp\joblib_memmapping_folder_8652_3d8518dfac8d4fb7bdf163570f167d46_c52b433be9bd4061826becf0cba3ec57: FileNotFoundError(2, 'The system cannot find the file specified')
+  warnings.warn('resource_tracker: %s: %r' % (name, e))
+D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py:468: UserWarning: resource_tracker: D:\AmazonMLChallenge2026\work\tmp\joblib_memmapping_folder_8652_cae0140b1d914690bd3423162f492681_a35e5779a2b84e0d82282dca93d0ee28: FileNotFoundError(2, 'The system cannot find the file specified')
+  warnings.warn('resource_tracker: %s: %r' % (name, e))
+D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py:468: UserWarning: resource_tracker: D:\AmazonMLChallenge2026\work\tmp\joblib_memmapping_folder_8652_3d8518dfac8d4fb7bdf163570f167d46_6a63f0d5c44141bf9427515afb0e055a: FileNotFoundError(2, 'The system cannot find the file specified')
+  warnings.warn('resource_tracker: %s: %r' % (name, e))
+D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py:468: UserWarning: resource_tracker: D:\AmazonMLChallenge2026\work\tmp\joblib_memmapping_folder_8652_cb40f58b15914745b0d5cadd4b864076_5af4ed2c8c9c4c57a50eab91ebba9a8e: FileNotFoundError(2, 'The system cannot find the file specified')
+  warnings.warn('resource_tracker: %s: %r' % (name, e))
+D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py:468: UserWarning: resource_tracker: D:\AmazonMLChallenge2026\work\tmp\joblib_memmapping_folder_8652_3d8518dfac8d4fb7bdf163570f167d46_a8d4a134c54f44afa1b4887691b3f879: FileNotFoundError(2, 'The system cannot find the file specified')
+  warnings.warn('resource_tracker: %s: %r' % (name, e))
+D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py:468: UserWarning: resource_tracker: D:\AmazonMLChallenge2026\work\tmp\joblib_memmapping_folder_8652_d3d595364ca9459481741d99f56fb310_b45b97b1f2df4313b47fe0eaab7268b2: FileNotFoundError(2, 'The system cannot find the file specified')
+  warnings.warn('resource_tracker: %s: %r' % (name, e))
+D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py:468: UserWarning: resource_tracker: D:\AmazonMLChallenge2026\work\tmp\joblib_memmapping_folder_8652_3d8518dfac8d4fb7bdf163570f167d46_ede839fbc39a468083cefec1e8e428d1: FileNotFoundError(2, 'The system cannot find the file specified')
+  warnings.warn('resource_tracker: %s: %r' % (name, e))
+D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py:468: UserWarning: resource_tracker: D:\AmazonMLChallenge2026\work\tmp\joblib_memmapping_folder_8652_075fe4ace44a40dd8f7b8eac0e6c7bc1_04a18c9cd97b4b07867762ededc4e8ed: FileNotFoundError(2, 'The system cannot find the file specified')
+  warnings.warn('resource_tracker: %s: %r' % (name, e))
+D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py:468: UserWarning: resource_tracker: D:\AmazonMLChallenge2026\work\tmp\joblib_memmapping_folder_8652_3d8518dfac8d4fb7bdf163570f167d46_9b73f7220f30495bbf0f7a752b5f9423: FileNotFoundError(2, 'The system cannot find the file specified')
+  warnings.warn('resource_tracker: %s: %r' % (name, e))
+D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py:468: UserWarning: resource_tracker: D:\AmazonMLChallenge2026\work\tmp\joblib_memmapping_folder_8652_452b00745c4a4316a68f65ed3b0f7508_d7947565ea6441e78fbeb8741e1f16f1: FileNotFoundError(2, 'The system cannot find the file specified')
+  warnings.warn('resource_tracker: %s: %r' % (name, e))
+D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py:468: UserWarning: resource_tracker: D:\AmazonMLChallenge2026\work\tmp\joblib_memmapping_folder_8652_3d8518dfac8d4fb7bdf163570f167d46_ac9fe23e9de34839b0fb5251dcc7e9cf: FileNotFoundError(2, 'The system cannot find the file specified')
+  warnings.warn('resource_tracker: %s: %r' % (name, e))
+D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py:468: UserWarning: resource_tracker: D:\AmazonMLChallenge2026\work\tmp\joblib_memmapping_folder_8652_543cc391642a417daee3330e6b9a4d36_d6d8038f25b344259fa740151910e4de: FileNotFoundError(2, 'The system cannot find the file specified')
+  warnings.warn('resource_tracker: %s: %r' % (name, e))
+D:\AmazonMLChallenge2026\.venv\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py:468: UserWarning: resource_tracker: D:\AmazonMLChallenge2026\work\tmp\joblib_memmapping_folder_8652_3d8518dfac8d4fb7bdf163570f167d46_94f97316fa5e41c198611eef611a1771: FileNotFoundError(2, 'The system cannot find the file specified')
+  warnings.warn('resource_tracker: %s: %r' % (name, e))

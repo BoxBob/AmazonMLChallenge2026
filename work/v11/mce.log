@@ -1,0 +1,54 @@
+[   140s] training pairs: entities 400,000 | top-16 positives 1,338,757, hard negatives 636,216, easy negatives sampled 1,525,027, GBDT-error duplicates 49,494 -> 3,549,494
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights: 100%|██████████| 201/201 [00:00<00:00, 2245.73it/s]
+[   146s] fine-tuning from D:\AmazonMLChallenge2026\work\v9\mce_model: 3,549,494 pairs, 55,461 steps, resuming at step 0
+[   147s]   step 0/55,461 loss 0.0035
+[   781s]   step 2,000/55,461 loss 0.1127
+[  1243s]   step 4,000/55,461 loss 0.1020
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.94it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.94it/s]
+[  1706s]   step 6,000/55,461 loss 0.1019
+[  2170s]   step 8,000/55,461 loss 0.1018
+[  2634s]   step 10,000/55,461 loss 0.1016
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.44it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.44it/s]
+[  3234s]   step 12,000/55,461 loss 0.1024
+[  3684s]   step 14,000/55,461 loss 0.0854
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.27it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.27it/s]
+[  4135s]   step 16,000/55,461 loss 0.0946
+[  4585s]   step 18,000/55,461 loss 0.0921
+[  5034s]   step 20,000/55,461 loss 0.0893
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.94it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.94it/s]
+[  5628s]   step 22,000/55,461 loss 0.0953
+[  6082s]   step 24,000/55,461 loss 0.1028
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.92it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.92it/s]
+[  6536s]   step 26,000/55,461 loss 0.0946
+[  6990s]   step 28,000/55,461 loss 0.0841
+[  7444s]   step 30,000/55,461 loss 0.0934
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.40it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.40it/s]
+[  7898s]   step 32,000/55,461 loss 0.0904
+[  8352s]   step 34,000/55,461 loss 0.0891
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.89it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.89it/s]
+[  8806s]   step 36,000/55,461 loss 0.0886
+[  9260s]   step 38,000/55,461 loss 0.0941
+[  9713s]   step 40,000/55,461 loss 0.0877
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.87it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.87it/s]
+[ 10317s]   step 42,000/55,461 loss 0.0802
+[ 10770s]   step 44,000/55,461 loss 0.0876
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  2.06it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  2.06it/s]
+[ 11223s]   step 46,000/55,461 loss 0.0915
+[ 11697s]   step 48,000/55,461 loss 0.0891
+[ 12195s]   step 50,000/55,461 loss 0.0882
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.93it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.93it/s]
+[ 12654s]   step 52,000/55,461 loss 0.0839
+[ 13121s]   step 54,000/55,461 loss 0.0841
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.84it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.84it/s]
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.86it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.86it/s]
+[ 13458s] fine-tuning done
+[ 13505s] no cross-encoder                  : t=0.600 A=0.9784 B=0.9791 all=0.9788
+[ 13505s] validation wide-band pairs 265,869 (narrow 132,498)
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights:  38%|███▊      | 76/201 [00:00<00:00, 756.32it/s]Loading weights: 100%|██████████| 201/201 [00:00<00:00, 1253.59it/s]
+[ 13745s] v9 mce band 0.01-0.99             : CE AUC 0.9550 | blend [[0.6980000138282776, 0.4259999990463257]] | t=0.700 A=0.9833 B=0.9836 all=0.9835
+[ 13791s] v9 mce band 0.001-0.999           : CE AUC 0.9814 | blend [[0.6869999766349792, 0.43299999833106995]] | t=0.725 A=0.9834 B=0.9836 all=0.9835
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights:  51%|█████     | 103/201 [00:00<00:00, 1020.38it/s]Loading weights: 100%|██████████| 201/201 [00:00<00:00, 1317.96it/s]
+[ 14029s] v11 mce band 0.01-0.99            : CE AUC 0.9568 | blend [[0.7279999852180481, 0.5360000133514404]] | t=0.725 A=0.9835 B=0.9838 all=0.9837
+[ 14064s] v11 mce band 0.001-0.999          : CE AUC 0.9827 | blend [[0.703000009059906, 0.5490000247955322]] | t=0.750 A=0.9836 B=0.9839 all=0.9837
+[ 14064s] done
+exit=0

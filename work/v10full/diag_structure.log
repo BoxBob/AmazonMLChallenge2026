@@ -1,0 +1,10 @@
+D:\AmazonMLChallenge2026\code\experiments\diag_structure.py:43: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  f"with >=2 records total: {(k.sum(1) >= 2).mean():.1%}")
+1) ARTIFACTS
+   corr(S1 row position, matched S2 row position) = -0.0001
+   corr(S1 id number, matched S2 id number)      = +0.0029 (spearman +0.0029)
+   rows between S2 records of the same cluster: median 1,089,772, share <=10 rows 0.00% (random: median ~1,678,205)
+2) CLUSTER STRUCTURE
+   S1 clusters with >=1 S2 AND >=1 S3 record: 85.2%; with >=2 records total: 94.3%
+   blank-address true matches: 337,018; their cluster also holds an ADDRESSED record: 97.9%
+   name similarity S2<->S3 within a cluster: median 70, <60 in 43.3% | S1<->S2/S3: median 92, <60 in 25.4%

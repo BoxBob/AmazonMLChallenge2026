@@ -1,0 +1,26 @@
+[   156s] group-model probabilities computed
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights:  75%|███████▍  | 150/201 [00:00<00:00, 1455.24it/s]Loading weights: 100%|██████████| 201/201 [00:00<00:00, 1908.24it/s]
+[   387s] v9 cross-encoder scored 132,498 band pairs
+[   423s] v10 blend (reference)           : t=0.700 A=0.9833 B=0.9836 all=0.9835
+[   423s] zone pairs 87,847 (22.3% true); anchor pairs 330,831
+[   428s] zone x anchor sibling pairs 280,469
+[   429s] features: base ['pb', 'p2', 'pce', 'n_tset', 'a_tset', 'hn_eq', 'pf_rank', 'addr_blank_c', 'rank_core'] | collective ['n_anchor', 'sib_s_name_max', 'sib_s_name_r_max', 'sib_s_addr_max', 'sib_same_hn_max', 'sib_agree_sum', 'sib_p_anchor_max', 'sib_same_src_sum', 'bestsib_addr', 'bestsib_hn', 'rival', 'c_blank_addr', 'same_src_anchors']
+[   468s] control stacker (base features) : t=0.775 A=0.9839 B=0.9841 all=0.9840
+[   507s] collective stacker              : t=0.725 A=0.9840 B=0.9842 all=0.9841
+pb                  128.9
+p2                   26.2
+pce                  11.3
+sib_same_hn_max       7.1
+hn_eq                 5.2
+addr_blank_c          5.0
+n_tset                4.9
+a_tset                4.5
+rank_core             4.4
+rival                 4.3
+sib_s_addr_max        4.2
+sib_same_src_sum      4.1
+sib_s_name_r_max      4.1
+n_anchor              4.0
+pf_rank               3.7
+[   507s] done
+exit=0

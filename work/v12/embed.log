@@ -1,0 +1,4 @@
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 2012.50it/s]
+[   277s] train: embedded 1,000,000/12,527,040
+[   550s] train: embedded 2,000,000/12,527,040
+[   823s] train: embedded 3,000,000/12,527,040

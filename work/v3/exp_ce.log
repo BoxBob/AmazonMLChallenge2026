@@ -1,0 +1,26 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights:  74%|#######4  | 149/201 [00:00<00:00, 1489.01it/s]Loading weights: 100%|##########| 201/201 [00:00<00:00, 1950.42it/s]
+[transformers] The new embeddings will be initialized from a multivariate normal distribution that has old embeddings' mean and covariance. As described in this article: https://nlp.stanford.edu/~johnhew/vocab-expansion.html. To disable this, use `mean_resizing=False`
+[     5s] model cross-encoder/ms-marco-MiniLM-L12-v2: 33.4M params
+[    12s] CE training pairs 1,200,000 (positives 41.0%)
+D:\AmazonMLChallenge2026\work\nb_build\exp_ce.py:93: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  sched.step()
+[    14s]   step 0/18,750 loss 0.0680
+[   355s]   step 2,000/18,750 loss 0.0711
+[   692s]   step 4,000/18,750 loss 0.0549
+[  1030s]   step 6,000/18,750 loss 0.0466
+[  1362s]   step 8,000/18,750 loss 0.0489
+[  1697s]   step 10,000/18,750 loss 0.0379
+[  2033s]   step 12,000/18,750 loss 0.0404
+[  2372s]   step 14,000/18,750 loss 0.0424
+[  2701s]   step 16,000/18,750 loss 0.0359
+[  3021s]   step 18,000/18,750 loss 0.0340
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|##########| 1/1 [00:00<00:00,  8.89it/s]Writing model shards: 100%|##########| 1/1 [00:00<00:00,  8.87it/s]
+[  3141s] training done
+[  3141s] val band pairs 76,258 (2.5% of val pairs)
+[  3191s] val scoring done
+[  3214s] blend weights [[0.772 0.409]] bias [0.019]
+exp p2 (base)            t=0.700  A=0.9774  B=0.9778  all=0.9776
+CE replaces p2 in band   t=0.900  A=0.9750  B=0.9748  all=0.9749
+blend                    t=0.700  A=0.9810  B=0.9809  all=0.9810
+exit=0
