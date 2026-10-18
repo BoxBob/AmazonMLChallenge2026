@@ -13,3 +13,7 @@ versions/**/*.npz
 versions/**/*.npy
 *.zip
 *.pdf
+
+# local Claude Code settings
+.claude/settings.local.json
+.claude/scheduled_tasks.lock
